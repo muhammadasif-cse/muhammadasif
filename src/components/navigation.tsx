@@ -24,6 +24,7 @@ const ThemeSwitcher = dynamic(
 
 import { Menu } from "lucide-react";
 import dynamic from "next/dynamic";
+import { usePathname } from "next/navigation";
 
 export const AsifLogo = () => {
   return (
@@ -39,7 +40,12 @@ export const AsifLogo = () => {
 };
 
 export default function Navigation() {
+  const pathname = usePathname();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const isActiveRoute = (href: string) => {
+    return pathname === href;
+  };
 
   return (
     <>
@@ -51,7 +57,12 @@ export default function Navigation() {
         <NavbarContent className="hidden gap-4 sm:flex" justify="center">
           {navigation.map((item) => (
             <NavbarItem key={item.id}>
-              <Link href={item.href}>{item.name}</Link>
+              <Link
+                href={item.href}
+                className={isActiveRoute(item?.href) ? "text-secondary" : ""}
+              >
+                {item.name}
+              </Link>
             </NavbarItem>
           ))}
         </NavbarContent>
@@ -59,14 +70,14 @@ export default function Navigation() {
           <NavbarItem className="flex items-center gap-1">
             <div className="items-center hidden gap-1 lg:flex">
               <ThemeSwitcher />
-              <Button as={Link} color="primary" href="/resume" variant="flat">
+              <Button as={Link} color="secondary" href="/resume" variant="flat">
                 Resume
               </Button>
             </div>
             <Button
               className="flex lg:hidden"
               isIconOnly
-              color="primary"
+              color="secondary"
               variant="flat"
               onPress={onOpen}
             >
@@ -83,10 +94,18 @@ export default function Navigation() {
                 <AsifLogo />
                 <p className="font-bold text-inherit">ASIF</p>
               </DrawerHeader>
-              <DrawerBody>
+              <DrawerBody className="w-full space-y-1">
                 {navigation.map((item) => (
                   <div key={item.id}>
-                    <Link href={item.href}>{item.name}</Link>
+                    <Link href={item.href}>
+                      <p
+                        className={`${
+                          isActiveRoute(item?.href) && "bg-secondary"
+                        } w-full p-3 border-b shadow-lg shadow-divider drop-shadow hover:bg-secondary rounded-xl`}
+                      >
+                        {item.name}
+                      </p>
+                    </Link>
                   </div>
                 ))}
               </DrawerBody>
@@ -98,7 +117,7 @@ export default function Navigation() {
                   <ThemeSwitcher />
                   <Button
                     as={Link}
-                    color="primary"
+                    color="secondary"
                     href="/resume"
                     variant="flat"
                   >
