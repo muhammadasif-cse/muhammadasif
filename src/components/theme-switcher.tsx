@@ -20,7 +20,6 @@ export function ThemeSwitcher() {
     <div>
       <Button
         isIconOnly
-        size="sm"
         variant="flat"
         onPress={() => setTheme(theme === "light" ? "dark" : "light")}
       >
