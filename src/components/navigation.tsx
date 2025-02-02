@@ -49,7 +49,7 @@ export default function Navigation() {
 
   return (
     <>
-      <Navbar shouldHideOnScroll>
+      <Navbar isBordered>
         <NavbarBrand as={Link} href="/">
           <AsifLogo />
           <p className="font-bold text-inherit">ASIF</p>

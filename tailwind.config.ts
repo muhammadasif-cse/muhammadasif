@@ -10,6 +10,28 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        "shiny-text": "shiny-text 8s infinite",
+        ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
+      },
+      keyframes: {
+        "shiny-text": {
+          "0%, 90%, 100%": {
+            "background-position": "calc(-100% - var(--shiny-width)) 0",
+          },
+          "30%, 60%": {
+            "background-position": "calc(100% + var(--shiny-width)) 0",
+          },
+        },
+        ripple: {
+          "0%, 100%": {
+            transform: "translate(-50%, -50%) scale(1)",
+          },
+          "50%": {
+            transform: "translate(-50%, -50%) scale(0.9)",
+          },
+        },
+      },
       fontFamily: {
         sans: ["Oswald", "oswald"],
       },
