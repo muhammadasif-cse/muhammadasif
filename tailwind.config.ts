@@ -11,8 +11,10 @@ export default {
   theme: {
     extend: {
       animation: {
-        "shiny-text": "shiny-text 8s infinite",
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
+        marquee: "marquee var(--duration) linear infinite",
+        "shiny-text": "shiny-text 8s infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
       keyframes: {
         "shiny-text": {
@@ -22,6 +24,14 @@ export default {
           "30%, 60%": {
             "background-position": "calc(100% + var(--shiny-width)) 0",
           },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
         },
         ripple: {
           "0%, 100%": {

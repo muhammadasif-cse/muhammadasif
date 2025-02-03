@@ -100,7 +100,7 @@ export default function Navigation() {
                     <Link href={item.href}>
                       <p
                         className={`${
-                          isActiveRoute(item?.href) && "bg-secondary"
+                          isActiveRoute(item?.href) && "bg-secondary text-white"
                         } w-full p-3 border-b shadow-lg shadow-divider drop-shadow hover:bg-secondary rounded-xl`}
                       >
                         {item.name}
