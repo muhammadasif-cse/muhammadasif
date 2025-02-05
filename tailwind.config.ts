@@ -10,6 +10,12 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "light-grid":
+          "linear-gradient(to right, #D4D4D82e 1px, transparent 1px), linear-gradient(to bottom, #D4D4D82e 1px, transparent 1px)",
+        "dark-grid":
+          "linear-gradient(to right, #3F3F462e 1px, transparent 1px), linear-gradient(to bottom, #3F3F462e 1px, transparent 1px)",
+      },
       animation: {
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
         marquee: "marquee var(--duration) linear infinite",
@@ -47,5 +53,6 @@ export default {
       },
     },
   },
+  darkMode: "class",
   plugins: [heroui()],
 } satisfies Config;
