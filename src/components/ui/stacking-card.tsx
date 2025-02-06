@@ -32,18 +32,18 @@ export const StackingCard: React.FC<IStackingCardProps> = ({
   return (
     <div
       ref={container}
-      className="h-screen flex items-center justify-center sticky top-0"
+      className="h-[80vh] flex items-center justify-center sticky top-0"
     >
       <motion.div
         style={{
           scale,
           top: `calc(-5vh + ${i * 70}px)`,
         }}
-        className={`flex flex-col relative -top-[25%] h-fit w-full rounded-md origin-top overflow-hidden`}
+        className={`flex flex-col relative -top-[25%] h-fit w-full rounded-md origin-top overflow-hidden p-3`}
       >
         <Card>
           <CardHeader className="justify-center">
-            <h2 className="xl:text-3xl md:text-2xl text-xl text-center font-semibold text-slate-800 dark:text-slate-200">
+            <h2 className="xl:text-3xl md:text-2xl text-xl text-center font-semibold text-black dark:text-white">
               {data?.title}
             </h2>
           </CardHeader>
@@ -62,10 +62,10 @@ export const StackingCard: React.FC<IStackingCardProps> = ({
                 </motion.div>
               </div>
               <div className="flex flex-col justify-center">
-                <p className="text-base md:block hidden text-justify text-slate-800 dark:text-slate-200">
+                <p className="text-base md:block hidden text-justify text-black/50 dark:text-white/50">
                   {data.description}
                 </p>
-                <p className="text-base md:hidden block text-justify text-slate-800 dark:text-slate-200">
+                <p className="text-base md:hidden block text-justify text-black/50 dark:text-white/50">
                   {data.description.substring(0, 160)}...
                 </p>
                 <div className="mt-5 flex flex-wrap gap-1">
@@ -76,10 +76,20 @@ export const StackingCard: React.FC<IStackingCardProps> = ({
                   ))}
                 </div>
                 <div className="mt-3 space-x-1">
-                  <Button isIconOnly as={Link} href={data.liveUrl}>
+                  <Button
+                    variant="flat"
+                    isIconOnly
+                    as={Link}
+                    href={data.liveUrl}
+                  >
                     <LinkIcon />
                   </Button>
-                  <Button isIconOnly as={Link} href={data.githubUrl}>
+                  <Button
+                    variant="flat"
+                    isIconOnly
+                    as={Link}
+                    href={data.githubUrl}
+                  >
                     <GithubIcon />
                   </Button>
                 </div>
