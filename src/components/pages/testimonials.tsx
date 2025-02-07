@@ -26,11 +26,12 @@ const Testimonials = () => {
     },
   ];
   return (
-    <div className="mt-40">
-      <h1 className="2xl:text-7xl md:text-5xl text-3xl font-semibold text-center tracking-tight leading-[120%]">
+    <div>
+      <h2 className="mt-3 text-2xl md:text-4xl font-black tracking-tight text-center leading-relaxed">
         Success Stories from <br />
-        My Development Journey
-      </h1>
+        My Development
+        <span className="text-secondary"> Journey</span>
+      </h2>
       <AnimatedTestimonials testimonials={testimonials} />
     </div>
   );

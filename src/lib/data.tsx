@@ -266,7 +266,7 @@ export const projects: IProjects[] = [
     ],
     liveUrl: "https://ecommerce-demo.example.com",
     githubUrl: "https://github.com/asif/ecommerce-platform",
-    image: "https://placehold.co/600x400",
+    image: "https://placehold.co/1020x720",
   },
   {
     title: "Real-time Chat Application",
@@ -282,7 +282,7 @@ export const projects: IProjects[] = [
     ],
     liveUrl: "https://chatapp.example.com",
     githubUrl: "https://github.com/asif/chat-app",
-    image: "https://placehold.co/600x400",
+    image: "https://placehold.co/1020x720",
   },
   {
     title: "AI-Powered Blog Platform",
@@ -304,7 +304,7 @@ export const projects: IProjects[] = [
     ],
     liveUrl: "https://aiblog.example.com",
     githubUrl: "https://github.com/asif/ai-blog-platform",
-    image: "https://placehold.co/600x400",
+    image: "https://placehold.co/1020x720",
   },
   {
     title: "Job Portal System",
@@ -320,7 +320,7 @@ export const projects: IProjects[] = [
     ],
     liveUrl: "https://jobportal.example.com",
     githubUrl: "https://github.com/asif/job-portal",
-    image: "https://placehold.co/600x400",
+    image: "https://placehold.co/1020x720",
   },
   {
     title: "Online Learning Platform",
@@ -342,6 +342,6 @@ export const projects: IProjects[] = [
     ],
     liveUrl: "https://elearning.example.com",
     githubUrl: "https://github.com/asif/elearning-platform",
-    image: "https://placehold.co/600x400",
+    image: "https://placehold.co/1020x720",
   },
 ];

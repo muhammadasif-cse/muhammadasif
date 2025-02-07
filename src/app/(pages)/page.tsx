@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <Skills />
       <Projects />
-      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background mt-80">
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background mt-80 mb-20">
         <VelocityScroll>
           Software Engineer | Frontend Developer | Backend Developer | Fullstack
           Developer |

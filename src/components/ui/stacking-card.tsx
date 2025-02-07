@@ -1,5 +1,5 @@
 import { IProjects } from "@/lib/data";
-import { Button, Card, CardBody, CardHeader, Chip, Image } from "@heroui/react";
+import { Button, Card, CardBody, Chip, Image } from "@heroui/react";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { GithubIcon, LinkIcon } from "lucide-react";
 import Link from "next/link";
@@ -32,7 +32,7 @@ export const StackingCard: React.FC<IStackingCardProps> = ({
   return (
     <div
       ref={container}
-      className="h-fit mt-40 flex items-center justify-center sticky top-40"
+      className="h-fit mt-20 flex items-center justify-center sticky top-40"
     >
       <motion.div
         style={{
@@ -42,13 +42,8 @@ export const StackingCard: React.FC<IStackingCardProps> = ({
         className={`flex flex-col relative w-full rounded-md origin-top overflow-hidden p-3`}
       >
         <Card>
-          <CardHeader className="justify-center">
-            <h2 className="xl:text-3xl md:text-2xl text-xl text-center font-semibold text-black dark:text-white">
-              {data?.title}
-            </h2>
-          </CardHeader>
           <CardBody>
-            <div className="grid md:grid-cols-2 grid-cols-1 gap-3">
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-3">
               <div className={`relative w-full rounded-lg overflow-hidden`}>
                 <motion.div
                   className={`w-full h-full`}
@@ -58,11 +53,15 @@ export const StackingCard: React.FC<IStackingCardProps> = ({
                     draggable={false}
                     src={data?.image}
                     alt="image"
-                    className="object-cover h-full"
+                    className="object-cover max-h-80 object-center w-[100vw]"
                   />
                 </motion.div>
               </div>
               <div className="flex flex-col justify-center">
+                <p className="text-xl md:text-2xl font-black tracking-tight mb-4 text-secondary">
+                  {data?.title}
+                </p>
+
                 <p className="text-base md:block hidden text-justify text-black/50 dark:text-white/50">
                   {data.description}
                 </p>
@@ -71,7 +70,7 @@ export const StackingCard: React.FC<IStackingCardProps> = ({
                 </p>
                 <div className="mt-5 flex flex-wrap gap-1">
                   {data?.techStack?.map((data) => (
-                    <Chip key={data} color="secondary" variant="flat">
+                    <Chip key={data} color="success" variant="flat">
                       {data}
                     </Chip>
                   ))}

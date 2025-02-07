@@ -14,9 +14,12 @@ export default function Project(): JSX.Element {
   return (
     <ReactLenis root>
       <section ref={container}>
-        <h1 className="2xl:text-7xl md:text-5xl text-3xl font-semibold text-center tracking-tight leading-[120%]">
-          A Collection of My <br /> Top Development Works
-        </h1>
+        <h2 className="mt-3 text-2xl md:text-4xl font-black tracking-tight text-center leading-relaxed">
+          A Collection of My <br />
+          Top Development
+          <span className="text-secondary"> Works</span>
+        </h2>
+        <h2 className="mt-3 text-2xl md:text-4xl font-black tracking-tight text-center"></h2>
         <section className="w-full">
           {projects.map((project, i) => {
             const targetScale = 1 - (projects.length - i) * 0.05;
