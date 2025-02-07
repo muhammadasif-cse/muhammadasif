@@ -48,6 +48,11 @@ export const navigation: INavigation[] = [
     name: "Blogs",
     href: "/blogs",
   },
+  {
+    id: 4,
+    name: "Contact",
+    href: "/contact",
+  },
 ];
 
 export const socials: ISocial[] = [

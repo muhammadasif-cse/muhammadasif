@@ -34,6 +34,7 @@ const Hero = () => {
           >
             <CardBody className="overflow-hidden">
               <Image
+                draggable={false}
                 src="/images/muhammadasif.png"
                 height={500}
                 width={500}

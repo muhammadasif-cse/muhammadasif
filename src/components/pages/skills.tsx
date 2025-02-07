@@ -19,6 +19,7 @@ const SkillCard = ({ img, name, message, note }: ISkills) => {
     >
       <div className="flex flex-row items-center gap-2">
         <Image
+          draggable={false}
           className="rounded-full"
           width="32"
           height="32"

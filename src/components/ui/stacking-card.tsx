@@ -32,14 +32,14 @@ export const StackingCard: React.FC<IStackingCardProps> = ({
   return (
     <div
       ref={container}
-      className="h-[80vh] flex items-center justify-center sticky top-0"
+      className="h-fit mt-40 flex items-center justify-center sticky top-40"
     >
       <motion.div
         style={{
           scale,
           top: `calc(-5vh + ${i * 70}px)`,
         }}
-        className={`flex flex-col relative -top-[25%] h-fit w-full rounded-md origin-top overflow-hidden p-3`}
+        className={`flex flex-col relative w-full rounded-md origin-top overflow-hidden p-3`}
       >
         <Card>
           <CardHeader className="justify-center">
@@ -55,6 +55,7 @@ export const StackingCard: React.FC<IStackingCardProps> = ({
                   style={{ scale: imageScale }}
                 >
                   <Image
+                    draggable={false}
                     src={data?.image}
                     alt="image"
                     className="object-cover h-full"
