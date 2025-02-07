@@ -27,6 +27,19 @@ export interface IProjects {
   image: string;
 }
 
+export interface IFAQ {
+  icon: string;
+  question: string;
+  answer: string;
+}
+
+export interface ITestimonial {
+  quote: string;
+  name: string;
+  designation: string;
+  src: string;
+}
+
 export const navigation: INavigation[] = [
   {
     id: 0,
@@ -343,5 +356,67 @@ export const projects: IProjects[] = [
     liveUrl: "https://elearning.example.com",
     githubUrl: "https://github.com/asif/elearning-platform",
     image: "https://placehold.co/1020x720",
+  },
+];
+
+export const testimonials: ITestimonial[] = [
+  {
+    quote:
+      "I hired Asif to create my branding website, and he exceeded my expectations. His creativity and attention to detail amazed me. The site is very user-friendly and perfectly reflects my brand. I will always recommend him!",
+    name: "Amir Faysal",
+    designation: "Founder Of Thinkystorm",
+    src: "https://placehold.co/600x400",
+  },
+  {
+    quote:
+      "Working with Muhammad Asif to develop our education platform was a fantastic experience. He is highly professional and responsible with deadlines. The quality and depth of his work are commendable. We have been able to create an effective and user-friendly experience for our students through this platform.",
+    name: "MD. Abu Junaed Sajib",
+    designation: "Founder Of EduFixup",
+    src: "https://placehold.co/600x400",
+  },
+  {
+    quote:
+      "I am extremely satisfied with the work done for my e-commerce website. Not only did he provide a beautiful design, but he also improved the overall user experience of the site. His passion and professionalism are truly remarkable. I would love to work with him again!",
+    name: "Tarikul Islam Sushan",
+    designation: "Business Owner",
+    src: "https://placehold.co/600x400",
+  },
+];
+export const faq: IFAQ[] = [
+  {
+    icon: "code",
+    question: "What technologies do you specialize in?",
+    answer:
+      "I specialize in JavaScript, TypeScript, React.js, Vue.js, Node.js, Express.js, Nest.js, Django, Spring Boot, PostgreSQL, MySQL, and MongoDB, focusing on building scalable and high-performance web solutions.",
+  },
+  {
+    icon: "briefcase",
+    question: "Do you offer freelance or contract work?",
+    answer:
+      "Yes, I’m open to freelance and contract opportunities. If you have a project in mind, feel free to reach out via email or LinkedIn.",
+  },
+  {
+    icon: "user-check",
+    question: "How can I get in touch with you?",
+    answer:
+      "You can contact me via email at asif@example.com or connect with me on LinkedIn at linkedin.com/in/asif.",
+  },
+  {
+    icon: "globe",
+    question: "Do you contribute to open-source projects?",
+    answer:
+      "Yes, I actively contribute to open-source projects on GitHub. You can check out my repositories at github.com/asif.",
+  },
+  {
+    icon: "book-open",
+    question: "Do you write technical blogs or tutorials?",
+    answer:
+      "Yes, I write articles on software development, best practices, and new technologies. You can find my blogs on Medium or Dev.to.",
+  },
+  {
+    icon: "award",
+    question: "What are your notable achievements?",
+    answer:
+      "I have worked on high-traffic e-commerce platforms, developed scalable backend architectures, and contributed to successful product launches for various companies.",
   },
 ];

@@ -1,6 +1,6 @@
 "use client";
 
-import Contact from "@/components/pages/contact";
+import FAQ from "@/components/pages/faq";
 import Hero from "@/components/pages/hero";
 import Projects from "@/components/pages/projects";
 import Skills from "@/components/pages/skills";
@@ -22,7 +22,7 @@ export default function Home() {
         <div className="absolute inset-y-0 right-0 w-1/3 pointer-events-none bg-gradient-to-l from-white dark:from-background"></div>
       </div>
       <Team />
-      <Contact />
+      <FAQ />
     </div>
   );
 }

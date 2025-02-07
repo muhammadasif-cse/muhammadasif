@@ -14,10 +14,9 @@ export default function Project(): JSX.Element {
   return (
     <ReactLenis root>
       <section ref={container}>
-        <h2 className="mt-3 text-2xl md:text-4xl font-black tracking-tight text-center leading-relaxed">
+        <h2 className="text-4xl md:text-5xl !leading-[1.15] font-black tracking-tighter text-center">
           A Collection of My <br />
-          Top Development
-          <span className="text-secondary"> Works</span>
+          Top Development<span className="text-secondary"> Works</span>
         </h2>
         <h2 className="mt-3 text-2xl md:text-4xl font-black tracking-tight text-center"></h2>
         <section className="w-full">

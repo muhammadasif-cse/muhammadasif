@@ -53,11 +53,11 @@ export const AnimatedTestimonials = ({
   };
 
   return (
-    <Card className="mt-10">
+    <Card className="mt-10" shadow="sm">
       <CardBody>
-        <div className="max-w-sm md:max-w-screen-lg mx-auto antialiased font-sans overflow-hidden py-14 pl-14">
+        <div className="max-w-sm md:max-w-screen-lg mx-auto antialiased font-sans overflow-hidden md:py-14 md:pl-14">
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
-            <div className="relative h-96 w-full">
+            <div className="relative h-fit w-full">
               <AnimatePresence>
                 {testimonials.map((testimonial, index) => (
                   <motion.div
@@ -96,13 +96,13 @@ export const AnimatedTestimonials = ({
                       width={500}
                       height={400}
                       draggable={false}
-                      className="h-full w-full rounded-3xl object-cover object-center"
+                      className="h-full w-full rounded-3xl object-cover object-center max-h-40 md:max-h-80"
                     />
                   </motion.div>
                 ))}
               </AnimatePresence>
             </div>
-            <div className="flex justify-between flex-col py-4">
+            <div className="flex justify-between flex-col py-4 mt-24 md:mt-0">
               <motion.div
                 key={active}
                 initial={{
@@ -154,7 +154,7 @@ export const AnimatedTestimonials = ({
                   ))}
                 </motion.p>
               </motion.div>
-              <div className="flex gap-4 pt-12 md:pt-0">
+              <div className="flex gap-4 pt-12 md:pt-4">
                 <button
                   onClick={handlePrev}
                   className="h-7 w-7 rounded-full bg-gray-100 dark:bg-neutral-800 flex items-center justify-center group/button"
