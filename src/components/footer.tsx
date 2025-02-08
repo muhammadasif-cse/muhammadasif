@@ -6,8 +6,8 @@ import { BoxReveal } from "./ui/box-reveal";
 
 const Footer = () => {
   return (
-    <footer className="max-w-screen-lg mx-auto p-3">
-      <div className="flex flex-wrap justify-center gap-1 md:justify-between items-center">
+    <footer className="max-w-screen-lg p-3 mx-auto">
+      <div className="flex flex-wrap items-center justify-center gap-1 md:justify-between">
         {/* Copyright */}
         <span className="text-muted-foreground">
           &copy; 2022 - {new Date().getFullYear()}{" "}
@@ -17,7 +17,7 @@ const Footer = () => {
           . All rights reserved.
         </span>
         <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-          <div className="hidden md:flex flex-wrap gap-1 items-center">
+          <div className="flex-wrap items-center hidden gap-1 md:flex">
             {socials.map((social, index) => (
               <Button
                 as={Link}

@@ -108,7 +108,7 @@ const Contact = () => {
           </div>
 
           {/* Form */}
-          <Card className="bg-secondary/10 shadow-none">
+          <Card className="dark:bg-secondary/10" shadow="sm">
             <CardBody>
               <Form
                 className="w-full flex flex-col gap-4 items-center h-fit my-auto p-4"
