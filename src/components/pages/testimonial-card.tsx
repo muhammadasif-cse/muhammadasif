@@ -1,4 +1,4 @@
-import { Card, CardBody, Image } from "@heroui/react";
+import { Card, CardBody, CardFooter, CardHeader, Image } from "@heroui/react";
 import { Star } from "lucide-react";
 
 interface TestimonialCardProps {
@@ -19,7 +19,7 @@ export function TestimonialCard({
   return (
     <Card
       shadow="sm"
-      className="m-0.5 relative h-[310px] sm:h-[350px] md:h-[500px] w-full overflow-hidden"
+      className="m-0.5 relative h-[350px] md:h-[500px] w-full overflow-hidden"
     >
       <CardBody className="absolute w-full inset-0 pt-4 sm:pt-6 md:pt-8 flex flex-col justify-between">
         <div>
@@ -27,9 +27,12 @@ export function TestimonialCard({
             18 Jan 2024
           </h2>
 
-          <Card shadow="sm" className="relative md:max-w-lg xl:max-w-xs z-50">
-            <CardBody>
-              <div className="flex gap-1 mb-3">
+          <Card
+            shadow="sm"
+            className="relative md:max-w-lg xl:max-w-xs z-50 h-64"
+          >
+            <CardHeader>
+              <div className="flex gap-1">
                 {[...Array(rating)].map((_, i) => (
                   <Star
                     key={i}
@@ -37,10 +40,14 @@ export function TestimonialCard({
                   />
                 ))}
               </div>
-              <p className="text-sm sm:text-base dark:text-white/70 text-black/70 mb-4 text-justify">
+            </CardHeader>
+            <CardBody>
+              <p className="!text-sm sm:text-base dark:text-white/70 text-black/70 text-justify">
                 {quote}
               </p>
-              <div className="flex items-center justify-between">
+            </CardBody>
+            <CardFooter>
+              <div className="flex items-center gap-3 justify-between">
                 <div className="order-last">
                   <p className="font-medium text-sm sm:text-base text-secondary">
                     {author}
@@ -56,7 +63,7 @@ export function TestimonialCard({
                   />
                 </div>
               </div>
-            </CardBody>
+            </CardFooter>
           </Card>
         </div>
 

@@ -13,7 +13,10 @@ export default function Project(): JSX.Element {
   });
   return (
     <ReactLenis root>
-      <section ref={container}>
+      <section
+        ref={container}
+        className="min-h-screen h-fit my-auto flex flex-col justify-center py-12"
+      >
         <h2 className="text-4xl md:text-5xl !leading-[1.15] font-black tracking-tighter text-center">
           A Collection of My <br />
           Top Development<span className="text-secondary"> Works</span>

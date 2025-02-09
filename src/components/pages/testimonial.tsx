@@ -7,13 +7,17 @@ import { TestimonialCard } from "./testimonial-card";
 
 const Testimonial = () => {
   return (
-    <div className="container mx-auto">
+    <div className="py-12">
       <div>
-        <h2 className="text-4xl md:text-5xl !leading-[1.15] font-black tracking-tighter text-center">
-          Success Stories from <br />
-          My Development<span className="text-secondary"> Journey</span>
-        </h2>
-        <div className="w-full mt-20">
+        <h1 className="text-4xl font-bold mb-4 text-center">
+          Development Success<span className="text-success"> Stories</span>
+        </h1>
+        <p className="text-black/50 dark:text-white/50 text-lg max-w-2xl mx-auto text-center">
+          A deep dive into the key projects I’ve worked on, the challenges I’ve
+          faced, and the valuable lessons I’ve learned throughout my development
+          journey.
+        </p>
+        <div className="w-full mt-16">
           <Carousel
             className="relative w-full"
             opts={{

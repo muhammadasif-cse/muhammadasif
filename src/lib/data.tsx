@@ -40,6 +40,14 @@ export interface ITestimonial {
   role: string;
   rating?: number;
 }
+export interface IExperience {
+  title: string;
+  description: string;
+  status: "completed" | "running";
+  duration: string;
+  progress: number;
+  experiences: string[];
+}
 
 export const navigation: INavigation[] = [
   {
@@ -423,5 +431,51 @@ export const testimonials: ITestimonial[] = [
     role: "Business Owner",
     image: "/images/man.avif",
     rating: 4,
+  },
+];
+
+export const experience: IExperience[] = [
+  {
+    title: "Interlink Techsoft Limited",
+    description:
+      "Frontend Development: JavaScript, TypeScript, React.js, Next.js, Redux, Tailwind CSS. API Integration: Fetching and displaying data from RESTful APIs. Ensured cross-browser compatibility and optimized performance for a seamless user experience. Worked closely with backend developers to connect frontend interfaces with server-side functionality.",
+    status: "running",
+    duration: "May 2023 - Present",
+    progress: 100,
+    experiences: [
+      "Frontend Development",
+      "Basic UI components",
+      "Authentication system",
+      "Software Development",
+      "Performance Optimization",
+      "State Management with Redux, Zustand, or Context API",
+      "Component-Based Development",
+      "Responsive Design & Mobile Optimization",
+      "Unit & Integration Testing (Jest, React Testing Library, Cypress)",
+      "Version Control & CI/CD (Git, GitHub, GitLab, Automated Pipelines)",
+      "Collaboration & Agile Development",
+      "API Handling & Optimization",
+    ],
+  },
+
+  {
+    title: "Thinky Storm",
+    description:
+      "Developed and maintained full-stack web applications using the MERN stack. Designed and implemented APIs for seamless data exchange between the frontend and backend. Utilized MongoDB for database management, schema design, and data manipulation. Created responsive and user-friendly interfaces using React, Redux, JavaScript, HTML, and CSS. Deployed applications on cloud platforms and optimized performance and scalability.",
+    status: "completed",
+    duration: "November 2022 - November 2023",
+    progress: 80,
+    experiences: [
+      "Full-Stack Development with MERN",
+      "Advanced User Management System",
+      "Analytics Dashboard Implementation",
+      "Integration with Third-Party APIs",
+      "Real-Time Notifications & WebSockets",
+      "Database Optimization & Indexing",
+      "Authentication & Authorization (JWT, OAuth)",
+      "Cloud Deployment & Performance Optimization",
+      "Responsive UI & Cross-Browser Compatibility",
+      "Unit & Integration Testing (Jest, Mocha, Cypress)",
+    ],
   },
 ];
