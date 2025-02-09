@@ -34,10 +34,11 @@ export interface IFAQ {
 }
 
 export interface ITestimonial {
+  image: string;
   quote: string;
-  name: string;
-  designation: string;
-  src: string;
+  author: string;
+  role: string;
+  rating?: number;
 }
 
 export const navigation: INavigation[] = [
@@ -359,29 +360,6 @@ export const projects: IProjects[] = [
   },
 ];
 
-export const testimonials: ITestimonial[] = [
-  {
-    quote:
-      "I hired Asif to create my branding website, and he exceeded my expectations. His creativity and attention to detail amazed me. The site is very user-friendly and perfectly reflects my brand. I will always recommend him!",
-    name: "Amir Faysal",
-    designation: "Founder Of Thinkystorm",
-    src: "https://placehold.co/600x400",
-  },
-  {
-    quote:
-      "Working with Muhammad Asif to develop our education platform was a fantastic experience. He is highly professional and responsible with deadlines. The quality and depth of his work are commendable. We have been able to create an effective and user-friendly experience for our students through this platform.",
-    name: "MD. Abu Junaed Sajib",
-    designation: "Founder Of EduFixup",
-    src: "https://placehold.co/600x400",
-  },
-  {
-    quote:
-      "I am extremely satisfied with the work done for my e-commerce website. Not only did he provide a beautiful design, but he also improved the overall user experience of the site. His passion and professionalism are truly remarkable. I would love to work with him again!",
-    name: "Tarikul Islam Sushan",
-    designation: "Business Owner",
-    src: "https://placehold.co/600x400",
-  },
-];
 export const faq: IFAQ[] = [
   {
     icon: "code",
@@ -418,5 +396,32 @@ export const faq: IFAQ[] = [
     question: "What are your notable achievements?",
     answer:
       "I have worked on high-traffic e-commerce platforms, developed scalable backend architectures, and contributed to successful product launches for various companies.",
+  },
+];
+
+export const testimonials: ITestimonial[] = [
+  {
+    quote:
+      '"I hired Asif to create my branding website, and he exceeded my expectations. His creativity and attention to detail amazed me. The site is very user-friendly and perfectly reflects my brand. I will always recommend him!"',
+    author: "Amir Faysal",
+    role: "Founder Of Thinkystorm",
+    image: "/images/man.avif",
+    rating: 5,
+  },
+  {
+    quote:
+      '"Working with Muhammad Asif to develop our education platform was a fantastic experience. He is highly professional and responsible with deadlines. The quality and depth of his work are commendable. We have been able to create an effective and user-friendly experience for our students through this platform."',
+    author: "MD. Abu Junaed Sajib",
+    role: "Founder Of EduFixup",
+    image: "/images/man.avif",
+    rating: 5,
+  },
+  {
+    quote:
+      '"I am extremely satisfied with the work done for my e-commerce website. Not only did he provide a beautiful design, but he also improved the overall user experience of the site. His passion and professionalism are truly remarkable. I would love to work with him again!"',
+    author: "Tarikul Islam Sushan",
+    role: "Business Owner",
+    image: "/images/man.avif",
+    rating: 4,
   },
 ];
