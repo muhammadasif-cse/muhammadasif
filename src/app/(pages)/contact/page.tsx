@@ -166,14 +166,24 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                <Button
-                  type="submit"
-                  className="mt-3 w-full"
-                  size="lg"
-                  color="secondary"
-                >
-                  Submit
-                </Button>
+                <div className="grid grid-cols-2 gap-1 w-full">
+                  <Button
+                    type="reset"
+                    className="mt-3 w-full"
+                    size="lg"
+                    color="warning"
+                  >
+                    Reset
+                  </Button>
+                  <Button
+                    type="submit"
+                    className="mt-3 w-full"
+                    size="lg"
+                    color="secondary"
+                  >
+                    Submit
+                  </Button>
+                </div>
               </Form>
             </CardBody>
           </Card>
