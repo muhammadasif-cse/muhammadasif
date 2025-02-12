@@ -8,9 +8,6 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  other: {
-    "google-site-verification": "D2vuzXd_0-8Nl5ykCrGWu4C6ocVJ_EFZwNQXyCaGXi0",
-  },
   keywords: [
     "React",
     "Next.js",
@@ -70,10 +67,6 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    {color: "#f4f4f5", media: "(prefers-color-scheme: light)"},
-    {color: "#111111", media: "(prefers-color-scheme: dark)"},
-  ],
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
