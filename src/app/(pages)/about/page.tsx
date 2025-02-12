@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  other: {
+    "google-site-verification": "your-verification-code",
+  },
   keywords: [
     "React",
     "Next.js",

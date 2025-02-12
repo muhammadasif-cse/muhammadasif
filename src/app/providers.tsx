@@ -1,11 +1,12 @@
 "use client";
 import Footer from "@/components/footer";
 import Navigation from "@/components/navigation";
-import { Spotlight } from "@/components/spotlight";
-import { HeroUIProvider } from "@heroui/react";
-import { ThemeProvider } from "next-themes";
+import {Spotlight} from "@/components/spotlight";
+import {HeroUIProvider} from "@heroui/react";
+import {Analytics} from "@vercel/analytics/react";
+import {ThemeProvider} from "next-themes";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export function Providers({children}: {children: React.ReactNode}) {
   return (
     <HeroUIProvider aria-label="Hero UI" aria-labelledby="hero-ui">
       <ThemeProvider enableSystem attribute="class" defaultTheme="system">
@@ -16,6 +17,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
           {children}
         </main>
         <Footer />
+        <Analytics />
       </ThemeProvider>
     </HeroUIProvider>
   );
