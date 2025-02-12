@@ -1,30 +1,18 @@
 "use client";
-import { navigation } from "@/lib/data";
-import {
-  Button,
-  Drawer,
-  DrawerBody,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Skeleton,
-  useDisclosure,
-} from "@heroui/react";
+import {navigation} from "@/lib/data";
+import {Drawer, DrawerBody, DrawerContent, DrawerFooter, DrawerHeader} from "@heroui/drawer";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@heroui/navbar";
+import {Skeleton} from "@heroui/skeleton";
 import Link from "next/link";
-const ThemeSwitcher = dynamic(
-  () => import("./theme-switcher").then((mod) => mod.ThemeSwitcher),
-  {
-    loading: () => <Skeleton className="w-10 h-10 rounded-xl" />,
-  }
-);
+const ThemeSwitcher = dynamic(() => import("./theme-switcher").then((mod) => mod.ThemeSwitcher), {
+  loading: () => <Skeleton className="w-10 h-10 rounded-xl" />,
+});
 
-import { Menu } from "lucide-react";
+import {Button} from "@heroui/button";
+import {useDisclosure} from "@heroui/use-disclosure";
+import {Menu} from "lucide-react";
 import dynamic from "next/dynamic";
-import { usePathname } from "next/navigation";
+import {usePathname} from "next/navigation";
 
 export const AsifLogo = () => {
   return (
@@ -41,7 +29,7 @@ export const AsifLogo = () => {
 
 export default function Navigation() {
   const pathname = usePathname();
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   const isActiveRoute = (href: string) => {
     return pathname === href;
@@ -57,10 +45,7 @@ export default function Navigation() {
         <NavbarContent className="hidden gap-4 sm:flex" justify="center">
           {navigation.map((item) => (
             <NavbarItem key={item.id}>
-              <Link
-                href={item.href}
-                className={isActiveRoute(item?.href) ? "text-secondary" : ""}
-              >
+              <Link href={item.href} className={isActiveRoute(item?.href) ? "text-secondary" : ""}>
                 {item.name}
               </Link>
             </NavbarItem>
@@ -115,12 +100,7 @@ export default function Navigation() {
                 </Button>
                 <div className="flex items-center gap-1 lg:hidden">
                   <ThemeSwitcher />
-                  <Button
-                    as={Link}
-                    color="secondary"
-                    href="/resume"
-                    variant="flat"
-                  >
+                  <Button as={Link} color="secondary" href="/resume" variant="flat">
                     Resume
                   </Button>
                 </div>

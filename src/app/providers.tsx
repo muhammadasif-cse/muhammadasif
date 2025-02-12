@@ -2,7 +2,7 @@
 import Footer from "@/components/footer";
 import Navigation from "@/components/navigation";
 import {Spotlight} from "@/components/spotlight";
-import {HeroUIProvider} from "@heroui/react";
+import {HeroUIProvider} from "@heroui/system";
 import {Analytics} from "@vercel/analytics/react";
 import {ThemeProvider} from "next-themes";
 

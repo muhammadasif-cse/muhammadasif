@@ -1,6 +1,8 @@
 "use client";
-import {Button, Chip, Image} from "@heroui/react";
+import {Button} from "@heroui/button";
+import {Chip} from "@heroui/chip";
 import {ArrowUpRight, Download} from "lucide-react";
+import Image from "next/image";
 
 const Index = () => {
   return (
@@ -33,8 +35,10 @@ const Index = () => {
         </div>
         <div className="w-full lg:aspect-auto lg:w-[720px] my-auto bg-accent rounded-xl">
           <Image
+            priority
+            width={720}
+            height={720}
             aria-label={"Muhammad Asif's profile picture"}
-            isZoomed
             src="/images/muhammadasif-about.jpeg"
             className="object-cover object-center"
             alt={"Muhammad Asif's profile picture"}

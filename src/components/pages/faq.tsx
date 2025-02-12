@@ -1,6 +1,7 @@
-import { faq } from "@/lib/data";
-import { Card, CardBody, Chip } from "@heroui/react";
-import { DynamicIcon, IconName } from "lucide-react/dynamic";
+import {faq} from "@/lib/data";
+import {Card, CardBody} from "@heroui/card";
+import {Chip} from "@heroui/chip";
+import {DynamicIcon, IconName} from "lucide-react/dynamic";
 
 const FAQ = () => {
   return (
@@ -10,12 +11,11 @@ const FAQ = () => {
           Frequently Asked <span className="text-secondary">Questions</span>
         </h1>
         <p className="text-black/50 dark:text-white/50 text-lg max-w-2xl mx-auto text-center">
-          Here you’ll find detailed answers to the most frequently asked
-          questions, helping you better understand our processes, products, and
-          how we can assist you with your needs.
+          Here you’ll find detailed answers to the most frequently asked questions, helping you
+          better understand our processes, products, and how we can assist you with your needs.
         </p>
         <div className="mt-12 grid md:grid-cols-2 gap-4">
-          {faq.map(({ question, answer, icon }) => (
+          {faq.map(({question, answer, icon}) => (
             <Card key={question} shadow="sm">
               <CardBody>
                 <div>

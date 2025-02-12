@@ -1,9 +1,11 @@
 "use client";
 
-import { experience, IExperience } from "@/lib/data";
-import { Card, CardBody, Chip, Progress } from "@heroui/react";
-import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Clock } from "lucide-react";
+import {experience, IExperience} from "@/lib/data";
+import {Card, CardBody} from "@heroui/card";
+import {Chip} from "@heroui/chip";
+import {Progress} from "@heroui/progress";
+import {motion} from "framer-motion";
+import {ArrowRight, CheckCircle2, Clock} from "lucide-react";
 
 const getStatusIcon = (status: IExperience["status"]) => {
   switch (status) {
@@ -18,17 +20,17 @@ const Experience = () => {
   return (
     <div className="py-12">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        initial={{opacity: 0, y: 20}}
+        animate={{opacity: 1, y: 0}}
+        transition={{duration: 0.5}}
         className="text-center mb-16"
       >
         <h1 className="text-4xl font-bold mb-4">
           Professional <span className="text-secondary">Experience</span>
         </h1>
         <p className="text-black/50 dark:text-white/50 text-lg max-w-2xl mx-auto">
-          A brief overview of my expertise, skills, and the technologies I
-          leverage to develop scalable and efficient software solutions.
+          A brief overview of my expertise, skills, and the technologies I leverage to develop
+          scalable and efficient software solutions.
         </p>
       </motion.div>
 
@@ -36,9 +38,9 @@ const Experience = () => {
         {experience.map((item, index) => (
           <motion.div
             key={item.title}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            initial={{opacity: 0, x: -20}}
+            whileInView={{opacity: 1, x: 0}}
+            transition={{duration: 0.5, delay: index * 0.1}}
             className="mb-8 relative"
           >
             <div className="absolute left-0 top-0 bottom-0 w-px border -ml-4 hidden md:block">
@@ -53,10 +55,7 @@ const Experience = () => {
               />
             </div>
 
-            <Card
-              className="p-3 md:p-6 md:ml-4 hover:shadow-lg transition-shadow"
-              shadow="sm"
-            >
+            <Card className="p-3 md:p-6 md:ml-4 hover:shadow-lg transition-shadow" shadow="sm">
               <CardBody>
                 <div className="flex flex-col md:flex-row gap-4 mb-4">
                   <div className="flex-1">
@@ -65,11 +64,7 @@ const Experience = () => {
                         <h3 className="text-xl font-semibold">{item.title}</h3>
                         <Chip
                           size="sm"
-                          color={
-                            item?.status === "completed"
-                              ? "success"
-                              : "secondary"
-                          }
+                          color={item?.status === "completed" ? "success" : "secondary"}
                         >
                           {item.status}
                         </Chip>
@@ -98,9 +93,9 @@ const Experience = () => {
                     {item.experiences.map((experience, experienceIndex) => (
                       <motion.div
                         key={experience}
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: experienceIndex * 0.1 }}
+                        initial={{opacity: 0}}
+                        whileInView={{opacity: 1}}
+                        transition={{delay: experienceIndex * 0.1}}
                         className="flex items-center gap-2 text-sm"
                       >
                         <ArrowRight className="w-4 h-4 text-black/50 dark:text-white/50" />

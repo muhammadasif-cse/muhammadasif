@@ -1,7 +1,8 @@
-import { projects } from "@/lib/data";
-import { Button, Chip } from "@heroui/react";
-import { motion } from "framer-motion";
-import { GithubIcon, LinkIcon } from "lucide-react";
+import {projects} from "@/lib/data";
+import {Button} from "@heroui/button";
+import {Chip} from "@heroui/chip";
+import {motion} from "framer-motion";
+import {GithubIcon, LinkIcon} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,17 +11,17 @@ const Projects = () => {
     <div className="flex items-center justify-center py-12">
       <div className="w-full">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{opacity: 0, y: 20}}
+          animate={{opacity: 1, y: 0}}
+          transition={{duration: 0.5}}
           className="text-center mb-16"
         >
           <h1 className="text-4xl font-bold mb-4">
             Featured <span className="text-secondary">Work</span>
           </h1>
           <p className="text-black/50 dark:text-white/50 text-lg max-w-2xl mx-auto">
-            Explore some of my key projects, showcasing my expertise in building
-            scalable and high-performance software solutions.
+            Explore some of my key projects, showcasing my expertise in building scalable and
+            high-performance software solutions.
           </p>
         </motion.div>
         <div className="mt-8 md:mt-16 w-full mx-auto space-y-20">
@@ -50,22 +51,13 @@ const Projects = () => {
                   <article className="p-4 space-y-2">
                     <div className="flex flex-wrap gap-1 items-center">
                       {project.techStack.map((tech) => (
-                        <Chip
-                          key={tech}
-                          radius="sm"
-                          color="secondary"
-                          variant="flat"
-                        >
+                        <Chip key={tech} radius="sm" color="secondary" variant="flat">
                           {tech}
                         </Chip>
                       ))}
                     </div>
-                    <h1 className="text-base font-semibold capitalize">
-                      {project.highlightTitle}
-                    </h1>
-                    <p className="text-sm leading-normal">
-                      {project.highlightDescription}
-                    </p>
+                    <h1 className="text-base font-semibold capitalize">{project.highlightTitle}</h1>
+                    <p className="text-sm leading-normal">{project.highlightDescription}</p>
                     <div className="text-base dark:text-white text-secondary font-normal  group-hover:opacity-100 opacity-0 translate-y-2 group-hover:translate-y-0 pt-2 flex gap-1  transition-all duration-300">
                       <Button
                         as={Link}
@@ -94,9 +86,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="basis-1/2 shrink-0">
-                <h4 className="mb-3 text-3xl font-bold tracking-tighter">
-                  {project.title}
-                </h4>
+                <h4 className="mb-3 text-3xl font-bold tracking-tighter">{project.title}</h4>
                 <p className="text-black/70 dark:text-white/70 text-base text-justify">
                   {project.description}
                 </p>
@@ -104,10 +94,7 @@ const Projects = () => {
                   <h4 className="text-lg font-semibold mt-4">Key Features</h4>
                   {project.features.map((feature) => {
                     return (
-                      <p
-                        key={feature}
-                        className="flex items-center gap-2 mt-2 ml-2"
-                      >
+                      <p key={feature} className="flex items-center gap-2 mt-2 ml-2">
                         <span className="text-secondary">•</span> {feature}
                       </p>
                     );

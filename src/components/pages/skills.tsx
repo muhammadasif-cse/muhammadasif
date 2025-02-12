@@ -1,12 +1,12 @@
-import { ISkills, skills } from "@/lib/data";
-import { cn } from "@/lib/utils";
-import { Image } from "@heroui/react";
-import { Marquee } from "../ui/marquee";
+import {ISkills, skills} from "@/lib/data";
+import {cn} from "@/lib/utils";
+import Image from "next/image";
+import {Marquee} from "../ui/marquee";
 
 const firstRow = skills.slice(0, skills.length / 2);
 const secondRow = skills.slice(skills.length / 2);
 
-const SkillCard = ({ img, name, message, note }: ISkills) => {
+const SkillCard = ({img, name, message, note}: ISkills) => {
   return (
     <figure
       className={cn(
@@ -14,7 +14,7 @@ const SkillCard = ({ img, name, message, note }: ISkills) => {
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
       )}
     >
       <div className="flex flex-row items-center gap-2">
@@ -28,9 +28,7 @@ const SkillCard = ({ img, name, message, note }: ISkills) => {
           src={`${process.env.SKILL_HOST}?i=${img}`}
         />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
+          <figcaption className="text-sm font-medium dark:text-white">{name}</figcaption>
           <p className="text-xs font-medium dark:text-white/40">{note}</p>
         </div>
       </div>

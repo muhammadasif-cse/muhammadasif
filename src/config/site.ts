@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Muhammad Asif - Full-Stack Developer & Software Engineer",
+  name: "Muhammad Asif - Software Engineer & Full-Stack Developer",
   description:
     "Expert in scalable web solutions with JavaScript, TypeScript, React, Node.js, and more. Building high-performance applications.",
   ogImage: "https://muhammadasif.vercel.app/images/muhammadasif.png",
@@ -13,7 +13,7 @@ export const siteConfig = {
     type: "website",
     locale: "en_US",
     url: "https://muhammadasif.vercel.app",
-    siteName: "Muhammad Asif - Full-Stack Developer & Software Engineer",
+    siteName: "Muhammad Asif - Software Engineer & Full-Stack Developer",
     description:
       "Software Engineer skilled in Java, Python, JavaScript, TypeScript, React, Vue, Node.js, and cloud technologies.",
     images: [
@@ -21,13 +21,13 @@ export const siteConfig = {
         url: "https://muhammadasif.vercel.app/images/muhammadasif.png",
         width: 1200,
         height: 630,
-        alt: "Muhammad Asif - Full-Stack Developer",
+        alt: "Muhammad Asif - Software Engineer & Full-Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Asif - Full-Stack Developer & Software Engineer",
+    title: "Muhammad Asif - Software Engineer",
     description:
       "Building scalable web applications with JavaScript, TypeScript, React, Node.js, and more.",
     image: "https://muhammadasif.vercel.app/images/muhammadasif.png",
