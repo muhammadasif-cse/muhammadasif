@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     "UI Components",
     "UI Design System",
     "Muhammad Asif",
+    "Muhammad Asif wd",
+    "Muhammad Asif cse",
     "Asif",
     "Muhammad",
     "Web Developer",
