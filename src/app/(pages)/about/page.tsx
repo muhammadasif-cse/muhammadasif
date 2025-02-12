@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   other: {
-    "google-site-verification": "your-verification-code",
+    "google-site-verification": "D2vuzXd_0-8Nl5ykCrGWu4C6ocVJ_EFZwNQXyCaGXi0",
   },
   keywords: [
     "React",
