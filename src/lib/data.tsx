@@ -25,6 +25,8 @@ export interface IProjects {
   liveUrl: string;
   githubUrl: string;
   image: string;
+  highlightTitle: string;
+  highlightDescription: string;
 }
 
 export interface IFAQ {
@@ -271,7 +273,7 @@ export const projects: IProjects[] = [
   {
     title: "E-Commerce Platform",
     description:
-      "A full-featured e-commerce platform that enables businesses to sell products online efficiently. This platform supports user authentication, product management, and seamless checkout with Stripe integration. Customers can browse through categorized products, add items to their cart, and complete purchases securely. The platform also includes an admin dashboard for managing orders, inventory, and users, along with a wishlist feature and product reviews to enhance the shopping experience.",
+      "A full-fledged e-commerce platform designed for businesses to seamlessly sell products online. It provides an intuitive shopping experience with secure authentication, product management, and Stripe-powered checkout. The system includes a feature-rich admin panel that allows vendors to manage orders, inventory, and customer data efficiently. Users can explore categorized products, add items to their cart, and complete purchases securely while enjoying additional features such as wishlists, product reviews, and order tracking.",
     techStack: [
       "Next.js",
       "Express.js",
@@ -280,36 +282,45 @@ export const projects: IProjects[] = [
       "Stripe API",
     ],
     features: [
-      "User authentication & authorization (JWT, OAuth)",
-      "Product catalog & categories with search and filtering",
-      "Shopping cart & checkout with Stripe integration",
-      "Order tracking & admin dashboard with analytics",
-      "Wishlist, product reviews & ratings",
+      "Secure authentication with JWT and OAuth",
+      "Seamless shopping cart & checkout integration with payment gateway",
+      "Real-time order tracking & notifications",
+      "Admin dashboard with analytics & inventory management",
+      "Wishlist, product reviews, and ratings system",
+      "Responsive design optimized for desktop & mobile users",
     ],
     liveUrl: "https://ecommerce-demo.example.com",
     githubUrl: "https://github.com/asif/ecommerce-platform",
-    image: "https://placehold.co/1020x720",
+    image: "/images/projects/muhammadasif-e-commerce-platform-mockup.avif",
+    highlightTitle: "Seamless Shopping Experience",
+    highlightDescription:
+      "Optimized for high performance and security, ensuring a smooth shopping journey for customers and an efficient management system for store owners.",
   },
   {
     title: "Real-time Chat Application",
     description:
-      "A modern and intuitive real-time chat application that allows users to engage in seamless one-on-one or group conversations. Built using WebSockets and Socket.io, this application delivers instant messaging with real-time updates. It includes features such as file sharing, user status indicators, and message encryption to ensure security. With a clean and user-friendly UI, users can communicate effectively while managing their chat history.",
+      "A modern, high-performance real-time chat application built with WebSockets and Socket.io, enabling instant communication for individuals and groups. The app supports group conversations, ensuring secure and fast messaging. Users can send text messages, share multimedia files, and see live status indicators. With a sleek and responsive UI, the app is designed for optimal engagement and seamless interactions across devices.",
     techStack: ["Next.js", "Express.js", "MongoDB", "Socket.io", "TailwindCSS"],
     features: [
-      "One-to-one and group messaging with real-time updates",
-      "WebSockets for instant communication",
-      "User authentication with JWT for secure login",
-      "Message encryption & file sharing support",
-      "Online/offline status indicators and chat history",
+      "Instant messaging powered by WebSockets",
+      "One-on-one and group chat functionality",
+      "Live online/offline user status indicators",
+      "File sharing (images, documents, videos)",
+      "Chat history storage with search capability",
+      "User authentication via JWT for secure access",
+      "Mobile-responsive UI with dark mode support",
     ],
     liveUrl: "https://chatapp.example.com",
     githubUrl: "https://github.com/asif/chat-app",
-    image: "https://placehold.co/1020x720",
+    image: "/images/projects/muhammadasif-e-commerce-platform-mockup.avif",
+    highlightTitle: "Instant & Secure Communication",
+    highlightDescription:
+      "Enables real-time, encrypted conversations with an engaging UI and smooth user experience across all devices.",
   },
   {
     title: "AI-Powered Blog Platform",
     description:
-      "An innovative blogging platform that leverages AI-powered content generation to assist writers in creating high-quality articles. Users can write, edit, and publish their blogs using a Markdown editor with advanced formatting options. AI integration provides topic suggestions and automatic text improvement, making the writing process more efficient. The platform is optimized for SEO, ensuring high search engine visibility. Users can also comment on articles with spam filtering to maintain content quality.",
+      "An innovative blogging platform that leverages AI-driven content suggestions to assist writers in generating high-quality articles. The system features a Markdown editor with advanced formatting tools, making writing and editing more intuitive. AI integration provides automatic topic recommendations and sentence improvements. The platform is optimized for SEO and includes an intelligent commenting system with spam filtering to maintain content quality. Users can publish, edit, and share their blogs effortlessly, with support for role-based access control.",
     techStack: [
       "Next.js",
       "Express.js",
@@ -318,36 +329,46 @@ export const projects: IProjects[] = [
       "TailwindCSS",
     ],
     features: [
-      "AI-assisted content generation with topic suggestions",
-      "Markdown editor with rich text formatting",
-      "User authentication & role-based access control",
-      "SEO-friendly article pages with social media sharing",
-      "Comment system with spam filtering and moderation",
+      "AI-powered content generation & suggestions",
+      "Advanced Markdown editor with rich formatting",
+      "SEO-optimized blog posts with meta tags & indexing",
+      "Spam-protected comment system with moderation tools",
+      "Social media sharing & post analytics",
+      "Drafts & scheduled publishing options",
     ],
     liveUrl: "https://aiblog.example.com",
     githubUrl: "https://github.com/asif/ai-blog-platform",
-    image: "https://placehold.co/1020x720",
+    image: "/images/projects/muhammadasif-e-commerce-platform-mockup.avif",
+    highlightTitle: "AI-Assisted Writing",
+    highlightDescription:
+      "Enhances the blogging experience with AI-powered tools for content suggestions, SEO optimization, and seamless editing.",
   },
   {
     title: "Job Portal System",
     description:
-      "A complete job portal system designed to connect employers with job seekers. The platform allows companies to post job listings, track applications, and manage candidate profiles. Job seekers can create professional resumes, apply for jobs, and receive updates on their applications. The system includes an advanced search and filtering mechanism, ensuring that users can easily find relevant job opportunities. Additionally, an admin dashboard is available for monitoring job listings and user activities.",
+      "A comprehensive job portal designed to connect employers with job seekers efficiently. The system enables companies to post job listings, manage candidate applications, and track recruitment metrics. Job seekers can create detailed resumes, apply for jobs, and receive updates on their applications. The platform includes advanced search and filtering options, allowing users to find the most relevant opportunities. An intuitive admin dashboard provides real-time insights into job postings, applications, and user activity.",
     techStack: ["Next.js", "Express.js", "MySQL", "Prisma ORM", "TailwindCSS"],
     features: [
-      "Employer and job seeker account creation",
-      "Job posting & application tracking system",
-      "Resume upload & profile management for candidates",
-      "Admin dashboard for managing job listings & analytics",
-      "Job search functionality with advanced filters",
+      "User registration & role-based access control (Employer/Job Seeker)",
+      "Job posting & application management system",
+      "Resume upload & candidate profile creation",
+      "Advanced job search with filtering & sorting",
+      "Email notifications for job applications & updates",
+      "Admin dashboard for managing job listings & user analytics",
+      "Company profiles & employer branding features",
+      "Mobile-friendly UI for seamless job searching on-the-go",
     ],
     liveUrl: "https://jobportal.example.com",
     githubUrl: "https://github.com/asif/job-portal",
-    image: "https://placehold.co/1020x720",
+    image: "/images/projects/job-portal-mockup.avif",
+    highlightTitle: "Smart Hiring Made Simple",
+    highlightDescription:
+      "A powerful job portal that streamlines recruitment with advanced search, tracking, and employer branding tools.",
   },
   {
     title: "Online Learning Platform",
     description:
-      "A comprehensive e-learning system that allows instructors to create and upload courses while enabling students to enroll and engage in interactive learning. The platform includes video streaming, file uploads, and quizzes to enhance the learning experience. Users can track their progress and earn certifications upon course completion. The system also includes discussion forums to facilitate peer-to-peer interaction and support. Secure authentication ensures that only registered users can access premium courses.",
+      "A feature-rich e-learning platform that enables instructors to create and manage courses while providing students with an engaging learning experience. The system includes video streaming, interactive quizzes, and certification upon course completion. Users can track progress, participate in discussion forums, and access learning materials from anywhere. Secure authentication ensures that only authorized users can access premium content. The platform is designed to scale, supporting a large number of students and courses.",
     techStack: [
       "Next.js",
       "Express.js",
@@ -356,15 +377,21 @@ export const projects: IProjects[] = [
       "TailwindCSS",
     ],
     features: [
-      "Course creation & management for instructors",
-      "Video streaming & cloud file uploads via Cloudinary",
-      "User authentication & subscription-based access",
-      "Interactive quizzes & certifications upon completion",
-      "Progress tracking, discussion forums, and student engagement tools",
+      "Course creation & content management for instructors",
+      "Video streaming with Cloudinary integration",
+      "Subscription-based access & secure authentication",
+      "Interactive quizzes & automated grading",
+      "Student progress tracking & performance analytics",
+      "Discussion forums & peer-to-peer collaboration",
+      "Certification upon course completion",
+      "SEO-friendly course pages & social media sharing",
     ],
     liveUrl: "https://elearning.example.com",
     githubUrl: "https://github.com/asif/elearning-platform",
-    image: "https://placehold.co/1020x720",
+    image: "/images/projects/elearning-mockup.avif",
+    highlightTitle: "Interactive & Engaging Learning",
+    highlightDescription:
+      "Empowers students and instructors with an intuitive learning experience, interactive content, and scalable course management.",
   },
 ];
 

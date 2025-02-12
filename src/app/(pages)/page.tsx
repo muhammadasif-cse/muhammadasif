@@ -3,6 +3,7 @@
 import Experience from "@/components/pages/experience";
 import FAQ from "@/components/pages/faq";
 import Hero from "@/components/pages/hero";
+import Projects from "@/components/pages/projects";
 import Skills from "@/components/pages/skills";
 import Testimonial from "@/components/pages/testimonial";
 
@@ -11,7 +12,7 @@ export default function Home() {
     <div>
       <Hero />
       <Skills />
-      {/* <Projects /> */}
+      <Projects />
       <Experience />
       <Testimonial />
       <FAQ />

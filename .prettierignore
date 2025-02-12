@@ -1,0 +1,12 @@
+dist
+node_modules
+plop
+coverage
+.changeset
+.next
+build
+scripts
+!.commitlintrc.cjs
+!.lintstagedrc.cjs
+!jest.config.js
+!react-shim.js

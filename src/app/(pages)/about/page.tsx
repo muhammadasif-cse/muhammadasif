@@ -1,6 +1,83 @@
 "use client";
-import { Button, Chip, Image } from "@heroui/react";
-import { ArrowUpRight, Download } from "lucide-react";
+import {siteConfig} from "@/config/site";
+import {Button, Chip, Image} from "@heroui/react";
+import {ArrowUpRight, Download} from "lucide-react";
+import {Metadata, Viewport} from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: [
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "React Aria",
+    "Server Components",
+    "React Components",
+    "UI Components",
+    "UI Design System",
+    "Muhammad Asif",
+    "Asif",
+    "Muhammad",
+    "Web Developer",
+    "Full Stack Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Software Engineer",
+    "React Developer",
+    "Node.js Developer",
+    "TypeScript Developer",
+    "NestJS Developer",
+    "Supabase Developer",
+    "Open Source Developer",
+    "GitHub",
+    "LinkedIn",
+    "Twitter",
+    "Portfolio",
+    "Projects",
+    "Blog",
+    "Resume",
+    "Experience",
+    "Skills",
+    "About",
+    "Contact",
+  ],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
+  twitter: siteConfig.twitter,
+  openGraph: siteConfig.openGraph,
+  authors: [
+    {
+      name: "muhammadasifcse",
+      url: "https://x.com/muhammadasifcse",
+    },
+  ],
+  creator: "muhammadasif-about",
+  alternates: {
+    canonical: "https://muhammadasif.vercel.app/about",
+    types: {
+      "application/rss+xml": [{url: "https://muhammadasif.vercel.app", title: "Muhammad Asif"}],
+    },
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    {color: "#f4f4f5", media: "(prefers-color-scheme: light)"},
+    {color: "#111111", media: "(prefers-color-scheme: dark)"},
+  ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 const About = () => {
   return (
@@ -27,21 +104,18 @@ const About = () => {
               <Button size="lg" className="text-base rounded-full">
                 Experience <ArrowUpRight className="!h-5 !w-5" />
               </Button>
-              <Button
-                variant="bordered"
-                size="lg"
-                className="text-base rounded-full shadow-none"
-              >
+              <Button variant="bordered" size="lg" className="text-base rounded-full shadow-none">
                 <Download className="!h-5 !w-5" /> Resume
               </Button>
             </div>
           </div>
           <div className="w-full lg:aspect-auto lg:w-[720px] my-auto bg-accent rounded-xl">
             <Image
+              aria-label={"Muhammad Asif's profile picture"}
               isZoomed
               src="/images/muhammadasif-about.jpeg"
               className="object-cover object-center"
-              alt={"about-image"}
+              alt={"Muhammad Asif's profile picture"}
             />
           </div>
         </div>

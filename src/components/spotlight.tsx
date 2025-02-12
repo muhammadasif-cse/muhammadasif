@@ -37,91 +37,93 @@ export const Spotlight = ({
       }}
       className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none"
     >
-      <motion.div
-        animate={{
-          x: [0, xOffset, 0],
-        }}
-        transition={{
-          duration,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-        className="absolute top-0 left-0 z-40 w-screen h-screen pointer-events-none"
-      >
-        <div
-          style={{
-            transform: `translateY(${translateY}px) rotate(-45deg)`,
-            background: gradientFirst,
-            width: `${width}px`,
-            height: `${height}px`,
+      <div aria-label="Spotlight section">
+        <motion.div
+          animate={{
+            x: [0, xOffset, 0],
           }}
-          className={`absolute top-0 left-0`}
-        />
+          transition={{
+            duration,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+          className="absolute top-0 left-0 z-40 w-screen h-screen pointer-events-none"
+        >
+          <div
+            style={{
+              transform: `translateY(${translateY}px) rotate(-45deg)`,
+              background: gradientFirst,
+              width: `${width}px`,
+              height: `${height}px`,
+            }}
+            className={`absolute top-0 left-0`}
+          />
 
-        <div
-          style={{
-            transform: "rotate(-45deg) translate(5%, -50%)",
-            background: gradientSecond,
-            width: `${smallWidth}px`,
-            height: `${height}px`,
-          }}
-          className={`absolute top-0 left-0 origin-top-left`}
-        />
+          <div
+            style={{
+              transform: "rotate(-45deg) translate(5%, -50%)",
+              background: gradientSecond,
+              width: `${smallWidth}px`,
+              height: `${height}px`,
+            }}
+            className={`absolute top-0 left-0 origin-top-left`}
+          />
 
-        <div
-          style={{
-            transform: "rotate(-45deg) translate(-180%, -70%)",
-            background: gradientThird,
-            width: `${smallWidth}px`,
-            height: `${height}px`,
-          }}
-          className={`absolute top-0 left-0 origin-top-left`}
-        />
-      </motion.div>
+          <div
+            style={{
+              transform: "rotate(-45deg) translate(-180%, -70%)",
+              background: gradientThird,
+              width: `${smallWidth}px`,
+              height: `${height}px`,
+            }}
+            className={`absolute top-0 left-0 origin-top-left`}
+          />
+        </motion.div>
 
-      <motion.div
-        animate={{
-          x: [0, -xOffset, 0],
-        }}
-        transition={{
-          duration,
-          repeat: Infinity,
-          repeatType: "reverse",
-          ease: "easeInOut",
-        }}
-        className="absolute top-0 right-0 z-40 w-screen h-screen pointer-events-none"
-      >
-        <div
-          style={{
-            transform: `translateY(${translateY}px) rotate(45deg)`,
-            background: gradientFirst,
-            width: `${width}px`,
-            height: `${height}px`,
+        <motion.div
+          animate={{
+            x: [0, -xOffset, 0],
           }}
-          className={`absolute top-0 right-0`}
-        />
+          transition={{
+            duration,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut",
+          }}
+          className="absolute top-0 right-0 z-40 w-screen h-screen pointer-events-none"
+        >
+          <div
+            style={{
+              transform: `translateY(${translateY}px) rotate(45deg)`,
+              background: gradientFirst,
+              width: `${width}px`,
+              height: `${height}px`,
+            }}
+            className={`absolute top-0 right-0`}
+          />
 
-        <div
-          style={{
-            transform: "rotate(45deg) translate(-5%, -50%)",
-            background: gradientSecond,
-            width: `${smallWidth}px`,
-            height: `${height}px`,
-          }}
-          className={`absolute top-0 right-0 origin-top-right`}
-        />
+          <div
+            style={{
+              transform: "rotate(45deg) translate(-5%, -50%)",
+              background: gradientSecond,
+              width: `${smallWidth}px`,
+              height: `${height}px`,
+            }}
+            className={`absolute top-0 right-0 origin-top-right`}
+          />
 
-        <div
-          style={{
-            transform: "rotate(45deg) translate(180%, -70%)",
-            background: gradientThird,
-            width: `${smallWidth}px`,
-            height: `${height}px`,
-          }}
-          className={`absolute top-0 right-0 origin-top-right`}
-        />
-      </motion.div>
+          <div
+            style={{
+              transform: "rotate(45deg) translate(180%, -70%)",
+              background: gradientThird,
+              width: `${smallWidth}px`,
+              height: `${height}px`,
+            }}
+            className={`absolute top-0 right-0 origin-top-right`}
+          />
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

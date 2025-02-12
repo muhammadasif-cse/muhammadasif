@@ -1,0 +1,22 @@
+{
+  "name": "Muhammad Asif",
+  "short_name": "muhammadasif",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/images/logo.ico",
+      "sizes": "192x192",
+      "type": "image/ico"
+    },
+    {
+      "src": "/images/logo.ico",
+      "sizes": "512x512",
+      "type": "image/ico"
+    }
+  ]
+}

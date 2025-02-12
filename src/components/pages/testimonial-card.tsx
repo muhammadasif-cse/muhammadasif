@@ -1,5 +1,6 @@
-import { Card, CardBody, CardFooter, CardHeader, Image } from "@heroui/react";
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/react";
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 interface TestimonialCardProps {
   image: string;
@@ -56,6 +57,8 @@ export function TestimonialCard({
                 </div>
                 <div className="md:hidden block">
                   <Image
+                    width={500}
+                    height={500}
                     draggable={false}
                     src={image}
                     alt={`${author} avatar`}
@@ -75,6 +78,8 @@ export function TestimonialCard({
           }}
         >
           <Image
+            width={500}
+            height={500}
             draggable={false}
             src={image}
             alt={`${author} background`}

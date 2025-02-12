@@ -1,0 +1,86 @@
+{
+  "routes": [
+    {
+      "key": "home",
+      "title": "Home",
+      "path": "/",
+      "keywords": "home, portfolio, Muhammad Asif, full stack developer"
+    },
+    {
+      "key": "about",
+      "title": "About",
+      "path": "/about",
+      "keywords": "about, Muhammad Asif, full stack developer, skills, experience"
+    },
+    {
+      "key": "blogs",
+      "title": "Blogs",
+      "path": "/blogs",
+      "keywords": "blogs, articles, Muhammad Asif, web development, programming"
+    },
+    {
+      "key": "contact",
+      "title": "Contact",
+      "path": "/contact",
+      "keywords": "contact, Muhammad Asif, email, social media, get in touch"
+    },
+    {
+      "key": "projects",
+      "title": "Projects",
+      "path": "/projects",
+      "keywords": "projects, Muhammad Asif, web development, React, Node.js, Python"
+    },
+    {
+      "key": "components",
+      "title": "Components",
+      "path": "/components",
+      "keywords": "components, UI, React components, reusable components, design system"
+    }
+  ],
+  "mobileRoutes": [
+    {
+      "key": "main",
+      "title": "Main",
+      "defaultOpen": true,
+      "keywords": "main routes, home, about, blogs, contact, projects, components",
+      "routes": [
+        {
+          "key": "home",
+          "title": "Home",
+          "path": "/",
+          "keywords": "home, portfolio, Muhammad Asif, full stack developer"
+        },
+        {
+          "key": "about",
+          "title": "About",
+          "path": "/about",
+          "keywords": "about, Muhammad Asif, full stack developer, skills, experience"
+        },
+        {
+          "key": "blogs",
+          "title": "Blogs",
+          "path": "/blogs",
+          "keywords": "blogs, articles, Muhammad Asif, web development, programming"
+        },
+        {
+          "key": "contact",
+          "title": "Contact",
+          "path": "/contact",
+          "keywords": "contact, Muhammad Asif, email, social media, get in touch"
+        },
+        {
+          "key": "projects",
+          "title": "Projects",
+          "path": "/projects",
+          "keywords": "projects, Muhammad Asif, web development, React, Node.js, Python"
+        },
+        {
+          "key": "components",
+          "title": "Components",
+          "path": "/components",
+          "keywords": "components, UI, React components, reusable components, design system"
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,8 @@
 import { IProjects } from "@/lib/data";
-import { Button, Card, CardBody, Chip, Image } from "@heroui/react";
+import { Button, Card, CardBody, Chip } from "@heroui/react";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { GithubIcon, LinkIcon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
@@ -50,6 +51,8 @@ export const StackingCard: React.FC<IStackingCardProps> = ({
                   style={{ scale: imageScale }}
                 >
                   <Image
+                    height={500}
+                    width={500}
                     draggable={false}
                     src={data?.image}
                     alt="image"
