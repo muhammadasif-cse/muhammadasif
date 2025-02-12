@@ -4,8 +4,7 @@ export const siteConfig = {
   name: "Muhammad Asif - Full-Stack Developer & Software Engineer",
   description:
     "Expert in scalable web solutions with JavaScript, TypeScript, React, Node.js, and more. Building high-performance applications.",
-  ogImage:
-    "https://muhammadasif.vercel.app/_next/image?url=%2Fimages%2Fmuhammadasif.png&w=640&q=75",
+  ogImage: "https://muhammadasif.vercel.app/images/muhammadasif.png",
   author: "Muhammad Asif",
   email: "muhammadasif.cse@gmail.com",
   siteUrl: "https://muhammadasif.vercel.app",
@@ -19,7 +18,7 @@ export const siteConfig = {
       "Software Engineer skilled in Java, Python, JavaScript, TypeScript, React, Vue, Node.js, and cloud technologies.",
     images: [
       {
-        url: "https://muhammadasif.vercel.app/_next/image?url=%2Fimages%2Fmuhammadasif.png&w=640&q=75",
+        url: "https://muhammadasif.vercel.app/images/muhammadasif.png",
         width: 1200,
         height: 630,
         alt: "Muhammad Asif - Full-Stack Developer",
@@ -31,8 +30,7 @@ export const siteConfig = {
     title: "Muhammad Asif - Full-Stack Developer & Software Engineer",
     description:
       "Building scalable web applications with JavaScript, TypeScript, React, Node.js, and more.",
-    image:
-      "https://muhammadasif.vercel.app/_next/image?url=%2Fimages%2Fmuhammadasif.png&w=640&q=75",
+    image: "https://muhammadasif.vercel.app/images/muhammadasif.png",
     creator: "@muhammadasif_cse",
   },
   links: {
