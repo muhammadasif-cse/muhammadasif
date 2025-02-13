@@ -2,6 +2,7 @@ import {faq} from "@/lib/data";
 import {Card, CardBody} from "@heroui/card";
 import {Chip} from "@heroui/chip";
 import {DynamicIcon, IconName} from "lucide-react/dynamic";
+import {BoxReveal} from "../ui/box-reveal";
 
 const FAQ = () => {
   return (
@@ -17,17 +18,19 @@ const FAQ = () => {
         <div className="mt-12 grid md:grid-cols-2 gap-4">
           {faq.map(({question, answer, icon}) => (
             <Card key={question} shadow="sm">
-              <CardBody>
-                <div>
-                  <Chip color="secondary" variant="flat" radius="sm">
-                    <DynamicIcon name={icon as IconName} size={24} />
-                  </Chip>
-                  <div className="mt-3 mb-2 flex items-start gap-2 text-2xl font-medium tracking-tighter dark:text-white/90 text-black/90">
-                    <span>{question}</span>
+              <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                <CardBody>
+                  <div>
+                    <Chip color="secondary" variant="flat" radius="sm">
+                      <DynamicIcon name={icon as IconName} size={24} />
+                    </Chip>
+                    <div className="mt-3 mb-2 flex items-start gap-2 text-2xl font-medium tracking-tighter dark:text-white/90 text-black/90">
+                      <span>{question}</span>
+                    </div>
+                    <p className="dark:text-white/50 text-black/50">{answer}</p>
                   </div>
-                  <p className="dark:text-white/50 text-black/50">{answer}</p>
-                </div>
-              </CardBody>
+                </CardBody>
+              </BoxReveal>
             </Card>
           ))}
         </div>
