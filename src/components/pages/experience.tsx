@@ -20,6 +20,7 @@ const Experience = () => {
   return (
     <div className="py-12">
       <motion.div
+        aria-label="experience"
         initial={{opacity: 0, y: 20}}
         animate={{opacity: 1, y: 0}}
         transition={{duration: 0.5}}
@@ -37,6 +38,7 @@ const Experience = () => {
       <div className="">
         {experience.map((item, index) => (
           <motion.div
+            aria-label={item.title}
             key={item.title}
             initial={{opacity: 0, x: -20}}
             whileInView={{opacity: 1, x: 0}}
@@ -55,8 +57,12 @@ const Experience = () => {
               />
             </div>
 
-            <Card className="p-3 md:p-6 md:ml-4 hover:shadow-lg transition-shadow" shadow="sm">
-              <CardBody>
+            <Card
+              aria-label={item?.title}
+              className="p-3 md:p-6 md:ml-4 hover:shadow-lg transition-shadow"
+              shadow="sm"
+            >
+              <CardBody aria-label={item?.status}>
                 <div className="flex flex-col md:flex-row gap-4 mb-4">
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center gap-2 justify-between mb-2">
@@ -83,7 +89,7 @@ const Experience = () => {
 
                 <div className="space-y-4">
                   <div className="flex items-center gap-2">
-                    <Progress value={item.progress} className="h-2" />
+                    <Progress aria-label={item?.title} value={item.progress} className="h-2" />
                     <span className="text-sm text-black/50 dark:text-white/50 w-12">
                       {item.progress}%
                     </span>
