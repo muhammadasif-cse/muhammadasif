@@ -41,6 +41,7 @@ export interface ITestimonial {
   author: string;
   role: string;
   rating?: number;
+  date?: string;
 }
 export interface IExperience {
   title: string;
@@ -274,13 +275,7 @@ export const projects: IProjects[] = [
     title: "E-Commerce Platform",
     description:
       "A full-fledged e-commerce platform designed for businesses to seamlessly sell products online. It provides an intuitive shopping experience with secure authentication, product management, and Stripe-powered checkout. The system includes a feature-rich admin panel that allows vendors to manage orders, inventory, and customer data efficiently. Users can explore categorized products, add items to their cart, and complete purchases securely while enjoying additional features such as wishlists, product reviews, and order tracking.",
-    techStack: [
-      "Next.js",
-      "Express.js",
-      "MongoDB",
-      "TailwindCSS",
-      "Stripe API",
-    ],
+    techStack: ["Next.js", "Express.js", "MongoDB", "TailwindCSS", "Stripe API"],
     features: [
       "Secure authentication with JWT and OAuth",
       "Seamless shopping cart & checkout integration with payment gateway",
@@ -291,7 +286,7 @@ export const projects: IProjects[] = [
     ],
     liveUrl: "https://ecommerce-demo.example.com",
     githubUrl: "https://github.com/asif/ecommerce-platform",
-    image: "/images/projects/muhammadasif-e-commerce-platform-mockup.avif",
+    image: "/images/projects/muhammadasif-e-commerce-platform-mockup.jpg",
     highlightTitle: "Seamless Shopping Experience",
     highlightDescription:
       "Optimized for high performance and security, ensuring a smooth shopping journey for customers and an efficient management system for store owners.",
@@ -312,22 +307,37 @@ export const projects: IProjects[] = [
     ],
     liveUrl: "https://chatapp.example.com",
     githubUrl: "https://github.com/asif/chat-app",
-    image: "/images/projects/muhammadasif-e-commerce-platform-mockup.avif",
+    image: "/images/projects/muhammadasif-real-time-chat-application-(chatme)-mockup.jpg",
     highlightTitle: "Instant & Secure Communication",
     highlightDescription:
       "Enables real-time, encrypted conversations with an engaging UI and smooth user experience across all devices.",
   },
   {
+    title: "Online Learning Platform",
+    description:
+      "A feature-rich e-learning platform that enables instructors to create and manage courses while providing students with an engaging learning experience. The system includes video streaming, interactive quizzes. Users can track progress, participate in discussion forums, and access learning materials from anywhere. Secure authentication ensures that only authorized users can access premium content. The platform is designed to scale, supporting a large number of students and courses.",
+    techStack: ["Next.js", "Express.js", "MongoDB", "Cloudinary", "TailwindCSS"],
+    features: [
+      "Course creation & content management for instructors",
+      "Video streaming with Cloudinary integration",
+      "Subscription-based access & secure authentication",
+      "Interactive quizzes & automated grading",
+      "Student progress tracking & performance analytics",
+      "Discussion forums & peer-to-peer collaboration",
+      "SEO-friendly course pages & social media sharing",
+    ],
+    liveUrl: "https://elearning.example.com",
+    githubUrl: "https://github.com/asif/elearning-platform",
+    image: "/images/projects/muhammadasif-online-learning-platform-mockup.jpg",
+    highlightTitle: "Interactive & Engaging Learning",
+    highlightDescription:
+      "Empowers students and instructors with an intuitive learning experience, interactive content, and scalable course management.",
+  },
+  {
     title: "AI-Powered Blog Platform",
     description:
       "An innovative blogging platform that leverages AI-driven content suggestions to assist writers in generating high-quality articles. The system features a Markdown editor with advanced formatting tools, making writing and editing more intuitive. AI integration provides automatic topic recommendations and sentence improvements. The platform is optimized for SEO and includes an intelligent commenting system with spam filtering to maintain content quality. Users can publish, edit, and share their blogs effortlessly, with support for role-based access control.",
-    techStack: [
-      "Next.js",
-      "Express.js",
-      "MongoDB",
-      "OpenAI API",
-      "TailwindCSS",
-    ],
+    techStack: ["Next.js", "Express.js", "MongoDB", "OpenAI API", "TailwindCSS"],
     features: [
       "AI-powered content generation & suggestions",
       "Advanced Markdown editor with rich formatting",
@@ -364,34 +374,6 @@ export const projects: IProjects[] = [
     highlightTitle: "Smart Hiring Made Simple",
     highlightDescription:
       "A powerful job portal that streamlines recruitment with advanced search, tracking, and employer branding tools.",
-  },
-  {
-    title: "Online Learning Platform",
-    description:
-      "A feature-rich e-learning platform that enables instructors to create and manage courses while providing students with an engaging learning experience. The system includes video streaming, interactive quizzes, and certification upon course completion. Users can track progress, participate in discussion forums, and access learning materials from anywhere. Secure authentication ensures that only authorized users can access premium content. The platform is designed to scale, supporting a large number of students and courses.",
-    techStack: [
-      "Next.js",
-      "Express.js",
-      "MongoDB",
-      "Cloudinary",
-      "TailwindCSS",
-    ],
-    features: [
-      "Course creation & content management for instructors",
-      "Video streaming with Cloudinary integration",
-      "Subscription-based access & secure authentication",
-      "Interactive quizzes & automated grading",
-      "Student progress tracking & performance analytics",
-      "Discussion forums & peer-to-peer collaboration",
-      "Certification upon course completion",
-      "SEO-friendly course pages & social media sharing",
-    ],
-    liveUrl: "https://elearning.example.com",
-    githubUrl: "https://github.com/asif/elearning-platform",
-    image: "/images/projects/elearning-mockup.avif",
-    highlightTitle: "Interactive & Engaging Learning",
-    highlightDescription:
-      "Empowers students and instructors with an intuitive learning experience, interactive content, and scalable course management.",
   },
 ];
 
@@ -440,24 +422,27 @@ export const testimonials: ITestimonial[] = [
       '"I hired Asif to create my branding website, and he exceeded my expectations. His creativity and attention to detail amazed me. The site is very user-friendly and perfectly reflects my brand. I will always recommend him!"',
     author: "Amir Faysal",
     role: "Founder Of Thinkystorm",
-    image: "/images/man.avif",
+    image: "/images/testimonials/amir-faysal-founder-of-thinkystorm.png",
     rating: 5,
+    date: "20 November 2021",
   },
   {
     quote:
       '"Working with Muhammad Asif to develop our education platform was a fantastic experience. He is highly professional and responsible with deadlines. The quality and depth of his work are commendable. We have been able to create an effective and user-friendly experience for our students through this platform."',
     author: "MD. Abu Junaed Sajib",
     role: "Founder Of EduFixup",
-    image: "/images/man.avif",
+    image: "/images/testimonials/md-abu-junaed-sajib-founder-of-edu-fixup.webp",
     rating: 5,
+    date: "12 February 2023",
   },
   {
     quote:
       '"I am extremely satisfied with the work done for my e-commerce website. Not only did he provide a beautiful design, but he also improved the overall user experience of the site. His passion and professionalism are truly remarkable. I would love to work with him again!"',
     author: "Tarikul Islam Sushan",
     role: "Business Owner",
-    image: "/images/man.avif",
+    image: "/images/testimonials/tarikul-islam-sushan-business-owner.jpg",
     rating: 4,
+    date: "27 June 2023",
   },
 ];
 

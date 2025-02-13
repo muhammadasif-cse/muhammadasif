@@ -1,23 +1,14 @@
+import {ITestimonial} from "@/lib/data";
 import {Card, CardBody, CardFooter, CardHeader} from "@heroui/card";
 import {Star} from "lucide-react";
 import Image from "next/image";
 
-interface TestimonialCardProps {
-  image: string;
-  quote: string;
-  author: string;
-  role: string;
-  rating?: number;
-}
-
-export function TestimonialCard({image, quote, author, role, rating}: TestimonialCardProps) {
+export function TestimonialCard({image, quote, author, role, date, rating}: ITestimonial) {
   return (
     <Card shadow="sm" className="m-0.5 relative h-[350px] md:h-[500px] w-full overflow-hidden">
       <CardBody className="absolute w-full inset-0 pt-4 sm:pt-6 md:pt-8 flex flex-col justify-between">
         <div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-secondary mb-6 md:mb-16">
-            18 Jan 2024
-          </h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-secondary mb-6 md:mb-16">{date}</h2>
 
           <Card shadow="sm" className="relative md:max-w-lg xl:max-w-xs z-50 h-64">
             <CardHeader>
@@ -46,6 +37,7 @@ export function TestimonialCard({image, quote, author, role, rating}: Testimonia
                     src={image}
                     alt={`${author} avatar`}
                     className="w-12 order-1 h-12 sm:w-16 sm:h-16 object-cover rounded-full"
+                    style={{width: "auto", height: "auto"}}
                   />
                 </div>
               </div>

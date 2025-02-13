@@ -18,19 +18,21 @@ const FAQ = () => {
         <div className="mt-12 grid md:grid-cols-2 gap-4">
           {faq.map(({question, answer, icon}) => (
             <Card key={question} shadow="sm">
-              <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-                <CardBody>
-                  <div>
-                    <Chip color="secondary" variant="flat" radius="sm">
-                      <DynamicIcon name={icon as IconName} size={24} />
-                    </Chip>
+              <CardBody>
+                <div>
+                  <Chip color="secondary" variant="flat" radius="sm">
+                    <DynamicIcon name={icon as IconName} size={24} />
+                  </Chip>
+                  <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                     <div className="mt-3 mb-2 flex items-start gap-2 text-2xl font-medium tracking-tighter dark:text-white/90 text-black/90">
                       <span>{question}</span>
                     </div>
+                  </BoxReveal>
+                  <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                     <p className="dark:text-white/50 text-black/50">{answer}</p>
-                  </div>
-                </CardBody>
-              </BoxReveal>
+                  </BoxReveal>
+                </div>
+              </CardBody>
             </Card>
           ))}
         </div>
