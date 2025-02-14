@@ -16,7 +16,9 @@ const getStatusIcon = (status: IExperience["status"]) => {
   }
 };
 
-const Experience = () => {
+const Experience = ({all}: {all?: boolean}) => {
+  const sliceExperience = all ? experience : experience.slice(0, 3);
+
   return (
     <div className="py-12">
       <motion.div
@@ -36,7 +38,7 @@ const Experience = () => {
       </motion.div>
 
       <div className="">
-        {experience.map((item, index) => (
+        {sliceExperience?.map((item, index) => (
           <motion.div
             aria-label={item.title}
             key={item.title}
