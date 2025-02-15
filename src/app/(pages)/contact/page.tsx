@@ -1,38 +1,95 @@
-"use client";
-
-import {Button} from "@heroui/button";
-import {Card, CardBody} from "@heroui/card";
-import {Form} from "@heroui/form";
-import {Input, Textarea} from "@heroui/input";
-
+import {siteConfig} from "@/config/site";
 import {MailIcon, MapPinIcon, MessageCircle, PhoneIcon} from "lucide-react";
+import {Metadata, Viewport} from "next";
 import Link from "next/link";
-import React from "react";
+import ContactForm from "./contact-form";
 
+export const metadata: Metadata = {
+  title: {
+    default: `Contact | ${siteConfig.name}`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  other: {
+    "google-site-verification": "755fhCCBs2v3FlIqESp5F3gm4WHRQLtJzc0qOmCGd8I",
+  },
+  keywords: [
+    "Contact Muhammad Asif",
+    "Hire Full Stack Developer",
+    "Freelance Software Engineer Contact",
+    "Web Developer Contact Information",
+    "Freelance Web Developer Email",
+    "Hire React Developer Fiverr Upwork",
+    "Next.js & MERN Stack Developer Contact",
+    "Express.js & Nest.js Backend Developer",
+    "JavaScript & TypeScript Expert for Hire",
+    "E-commerce Web Developer Contact",
+    "Custom Web Application Development Contact",
+    "AWS Cloud & DevOps Engineer Contact",
+    "MongoDB, PostgreSQL, MySQL Developer Contact",
+    "Hire Remote Web Developer",
+    "GitHub Open Source Contributor Contact",
+    "SEO Optimized Web Solutions Contact",
+    "Portfolio Website Development Inquiry",
+    "Freelancer Fiverr Upwork Web Development",
+    "Best Web Developer in Bangladesh Contact",
+    "Remote Developer Job Inquiry",
+    "Custom API Development Services",
+    "RESTful API & GraphQL Developer Contact",
+    "SaaS Web Application Development Services",
+    "Real-Time Web Applications Developer",
+    "Job Portal System Development Contact",
+    "E-commerce Store & Payment Integration Inquiry",
+    "Microservices & Docker Expert Contact",
+    "Serverless Backend Developer for Hire",
+    "Vue.js & Tailwind CSS Developer Contact",
+    "Unit Testing with Jest & Cypress Inquiry",
+    "Cloud Deployment AWS, Azure, GCP Contact",
+    "GraphQL & WebSockets Developer Contact",
+    "Firebase & Firestore Developer Contact",
+    "DevOps & CI/CD Pipeline Engineer Contact",
+    "Headless CMS & API-First Development Inquiry",
+    "Multi-Vendor E-commerce Developer Contact",
+    "ERP & CRM Web Development Inquiry",
+    "Web Accessibility & WCAG Compliance Services",
+    "Secure Payment Gateway Integration Contact",
+    "SQL & NoSQL Database Optimization Inquiry",
+    "AI Chatbot & NLP Developer Contact",
+    "Hybrid Mobile App Development Inquiry",
+    "Blockchain & Smart Contract Developer Contact",
+    "Contact Muhammad Asif Gmail: muhammadasif.cse@gmail.com",
+    "Contact Muhammad Asif Phone: 01930248584",
+  ],
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
+  twitter: siteConfig.twitter,
+  openGraph: siteConfig.openGraph,
+  authors: [
+    {
+      name: "muhammadasifcse",
+      url: "https://x.com/muhammadasifcse",
+    },
+  ],
+  creator: "muhammadasif-about",
+  alternates: {
+    canonical: "https://muhammadasif.vercel.app/about",
+    types: {
+      "application/rss+xml": [{url: "https://muhammadasif.vercel.app", title: "Muhammad Asif"}],
+    },
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 const Contact = () => {
-  const [errors, setErrors] = React.useState<Record<string, string>>({});
-  const [action, setAction] = React.useState<string | null>(null);
-
-  const onSubmit = (e: {
-    preventDefault: () => void;
-    currentTarget: HTMLFormElement | undefined;
-  }) => {
-    e.preventDefault();
-
-    const data = Object.fromEntries(new FormData(e.currentTarget));
-    console.log("data", data);
-    if (!data.firstName) {
-      setErrors({firstName: "first name is required"});
-
-      return;
-    }
-
-    // const result = callServer(data);
-    // setErrors(result.errors);
-  };
-
-  console.log("action", action);
-
   return (
     <div className="min-h-screen flex items-center justify-center py-16">
       <div className="w-full max-w-screen-lg mx-auto">
@@ -104,78 +161,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Form */}
-          <Card className="dark:bg-secondary/10" shadow="sm">
-            <CardBody>
-              <Form
-                className="w-full flex flex-col gap-4 items-center h-fit my-auto p-4"
-                validationBehavior="native"
-                onReset={() => setAction("reset")}
-                validationErrors={errors}
-                onSubmit={onSubmit}
-              >
-                <div className="grid md:grid-cols-2 gap-4 w-full">
-                  <Input
-                    isRequired
-                    name="firstName"
-                    label="First Name"
-                    type="text"
-                    labelPlacement="outside"
-                    placeholder="Enter your first name"
-                    className="col-span-2 md:col-span-1"
-                    validate={(value) => {
-                      if (value.length < 2) {
-                        return "First name must be at least 2 characters long";
-                      }
-                    }}
-                  />
-                  <Input
-                    isRequired
-                    name="lastName"
-                    label="Last Name"
-                    type="text"
-                    labelPlacement="outside"
-                    className="col-span-2 md:col-span-1"
-                    placeholder="Enter your last name"
-                    validate={(value) => {
-                      if (value.length < 3) {
-                        return "Last name must be at least 3 characters long";
-                      }
-                    }}
-                  />
-
-                  <div className="grid gap-4 col-span-2">
-                    <Input
-                      isRequired
-                      name="email"
-                      label="Email"
-                      type="email"
-                      labelPlacement="outside"
-                      errorMessage="Please enter a valid email"
-                      placeholder="Enter your email"
-                    />
-                    <Textarea
-                      isRequired
-                      label="Message"
-                      name="message"
-                      labelPlacement="outside"
-                      errorMessage="Please enter your message"
-                      placeholder="Enter your message"
-                      rows={6}
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-1 w-full">
-                  <Button type="reset" className="mt-3 w-full" size="lg" color="warning">
-                    Reset
-                  </Button>
-                  <Button type="submit" className="mt-3 w-full" size="lg" color="secondary">
-                    Submit
-                  </Button>
-                </div>
-              </Form>
-            </CardBody>
-          </Card>
+          <ContactForm />
         </div>
       </div>
     </div>

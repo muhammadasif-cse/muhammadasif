@@ -4,7 +4,7 @@ import Index from ".";
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: `About | ${siteConfig.name}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
