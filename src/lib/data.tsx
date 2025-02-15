@@ -488,7 +488,7 @@ export const experience: IExperience[] = [
     description:
       "Developed and maintained full-stack web applications using the MERN stack. Designed and implemented APIs for seamless data exchange between the frontend and backend. Utilized MongoDB for database management, schema design, and data manipulation. Created responsive and user-friendly interfaces using React, Redux, JavaScript, HTML, and CSS. Deployed applications on cloud platforms and optimized performance and scalability.",
     status: "completed",
-    duration: "November 2022 - November 2023",
+    duration: "November 2022 - May 2023",
     progress: 80,
     experiences: [
       "Full-Stack Development with MERN",
