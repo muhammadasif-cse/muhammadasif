@@ -18,7 +18,7 @@ const Skills = () => {
           <h1 className="mb-4 text-4xl font-bold">
             My Tech Stack <span className="text-secondary"> & Expertise</span>
           </h1>
-          <p className="max-w-2xl mx-auto text-lg text-black/50 dark:text-white/50">
+          <p className="text-black/50 dark:text-white/50 md:text-lg text-sm">
             A diverse skill set covering full-stack development, software development, backend
             services, databases, cloud, and modern frontend frameworks.
           </p>

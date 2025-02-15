@@ -31,7 +31,7 @@ const Experience = ({all}: {all?: boolean}) => {
         <h1 className="text-4xl font-bold mb-4">
           Professional <span className="text-secondary">Experience</span>
         </h1>
-        <p className="text-black/50 dark:text-white/50 text-lg max-w-2xl mx-auto">
+        <p className="text-black/50 dark:text-white/50 md:text-lg text-sm max-w-2xl mx-auto">
           A brief overview of my expertise, skills, and the technologies I leverage to develop
           scalable and efficient software solutions.
         </p>

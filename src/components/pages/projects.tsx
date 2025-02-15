@@ -20,7 +20,7 @@ const Projects = () => {
           <h1 className="text-4xl font-bold mb-4">
             Featured <span className="text-secondary">Work</span>
           </h1>
-          <p className="text-black/50 dark:text-white/50 text-lg max-w-2xl mx-auto">
+          <p className="text-black/50 dark:text-white/50 md:text-lg text-sm max-w-2xl mx-auto">
             Explore some of my key projects, showcasing my expertise in building scalable and
             high-performance software solutions.
           </p>

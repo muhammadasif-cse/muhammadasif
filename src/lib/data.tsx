@@ -1,3 +1,5 @@
+import {ReactNode} from "react";
+
 export interface INavigation {
   id: number;
   name: string;
@@ -51,7 +53,18 @@ export interface IExperience {
   progress: number;
   experiences: string[];
 }
-
+export interface ICategory {
+  key: string;
+  label: string;
+}
+export interface IBlog {
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  category: string[];
+  content: () => ReactNode;
+}
 export const navigation: INavigation[] = [
   {
     id: 0,
@@ -489,5 +502,56 @@ export const experience: IExperience[] = [
       "Responsive UI & Cross-Browser Compatibility",
       "Unit & Integration Testing (Jest, Mocha, Cypress)",
     ],
+  },
+];
+export const categories: ICategory[] = [
+  {key: "all", label: "All Posts"},
+  {key: "technology", label: "Technology"},
+  {key: "design", label: "Design"},
+  {key: "development", label: "Development"},
+  {key: "news", label: "Tech News"},
+];
+export const blogs: IBlog[] = [
+  {
+    title: "Lorem, ipsum dolor",
+    description: "An introduction to soilless farming techniques.",
+    category: ["Snippet", "JavaScript"],
+    image: "/images/projects/muhammadasif-e-commerce-platform-mockup.jpg",
+    date: "Dec-24-2024",
+    content: () => (
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate repudiandae architecto
+        inventore? Temporibus iure in corrupti, quia obcaecati quaerat illo modi est voluptatum
+        facere explicabo excepturi corporis animi, aperiam veniam.
+      </p>
+    ),
+  },
+  {
+    title: "React Hooks Deep Dive",
+    description: "Understanding advanced patterns with hooks.",
+    category: ["Snippet", "JavaScript"],
+    image: "/images/projects/muhammadasif-e-commerce-platform-mockup.jpg",
+    date: "Dec-24-2024",
+    content: () => (
+      <p>
+        React hooks revolutionized how developers manage state and lifecycle events in functional
+        components. Learn how to create custom hooks to encapsulate complex logic and improve
+        reusability across your projects.
+      </p>
+    ),
+  },
+  {
+    title: "CSS Grid Mastery",
+    description: "Building modern and clean layouts with ease.",
+    category: ["Snippet", "JavaScript"],
+    image: "/images/projects/muhammadasif-e-commerce-platform-mockup.jpg",
+    date: "Dec-24-2024",
+    content: () => (
+      <p>
+        CSS Grid is a powerful layout system available in CSS. It allows you to design responsive
+        and flexible web layouts with minimal code. Unlock its potential with real-world examples
+        and best practices.
+      </p>
+    ),
   },
 ];

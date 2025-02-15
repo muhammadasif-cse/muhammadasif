@@ -11,7 +11,7 @@ const FAQ = () => {
         <h1 className="text-4xl font-bold mb-4 text-center">
           Frequently Asked <span className="text-secondary">Questions</span>
         </h1>
-        <p className="text-black/50 dark:text-white/50 text-lg max-w-2xl mx-auto text-center">
+        <p className="text-black/50 dark:text-white/50 md:text-lg text-sm max-w-2xl mx-auto text-center">
           Here you’ll find detailed answers to the most frequently asked questions, helping you
           better understand our processes, products, and how we can assist you with your needs.
         </p>

@@ -37,7 +37,6 @@ export function TestimonialCard({image, quote, author, role, date, rating}: ITes
                     src={image}
                     alt={`${author} avatar`}
                     className="w-12 order-1 h-12 sm:w-16 sm:h-16 object-cover rounded-full"
-                    style={{width: "auto", height: "auto"}}
                   />
                 </div>
               </div>

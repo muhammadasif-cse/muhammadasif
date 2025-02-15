@@ -1,6 +1,11 @@
 "use client";
-import { Button, Card, CardBody, Form, Input, Textarea } from "@heroui/react";
-import { MailIcon, MapPinIcon, MessageCircle, PhoneIcon } from "lucide-react";
+
+import {Button} from "@heroui/button";
+import {Card, CardBody} from "@heroui/card";
+import {Form} from "@heroui/form";
+import {Input, Textarea} from "@heroui/input";
+
+import {MailIcon, MapPinIcon, MessageCircle, PhoneIcon} from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -17,7 +22,7 @@ const Contact = () => {
     const data = Object.fromEntries(new FormData(e.currentTarget));
     console.log("data", data);
     if (!data.firstName) {
-      setErrors({ firstName: "first name is required" });
+      setErrors({firstName: "first name is required"});
 
       return;
     }
@@ -36,8 +41,7 @@ const Contact = () => {
           Feel Free to Reach Out Anytime!
         </h2>
         <p className="mt-4 text-base sm:text-lg">
-          We&apos;d love to hear from you. Please fill out this form or shoot us
-          an email.
+          We&apos;d love to hear from you. Please fill out this form or shoot us an email.
         </p>
         <div className="mt-24 grid lg:grid-cols-2 gap-16 md:gap-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12">
@@ -78,9 +82,7 @@ const Contact = () => {
                 <MapPinIcon />
               </div>
               <h3 className="mt-6 font-bold text-xl">Office</h3>
-              <p className="my-2.5 text-muted-foreground">
-                Come say hello at my office
-              </p>
+              <p className="my-2.5 text-muted-foreground">Come say hello at my office</p>
               <Link
                 className="font-bold text-secondary tracking-tight"
                 href="https://map.google.com"
@@ -95,13 +97,8 @@ const Contact = () => {
                 <PhoneIcon />
               </div>
               <h3 className="mt-6 font-bold text-xl">Phone</h3>
-              <p className="my-2.5 text-muted-foreground">
-                Thursday-Fri from 10am to 12pm.
-              </p>
-              <Link
-                className="font-bold text-secondary tracking-tight"
-                href="tel:01930248584"
-              >
+              <p className="my-2.5 text-muted-foreground">Thursday-Fri from 10am to 12pm.</p>
+              <Link className="font-bold text-secondary tracking-tight" href="tel:01930248584">
                 +88 01930-248584
               </Link>
             </div>
@@ -125,6 +122,7 @@ const Contact = () => {
                     type="text"
                     labelPlacement="outside"
                     placeholder="Enter your first name"
+                    className="col-span-2 md:col-span-1"
                     validate={(value) => {
                       if (value.length < 2) {
                         return "First name must be at least 2 characters long";
@@ -137,6 +135,7 @@ const Contact = () => {
                     label="Last Name"
                     type="text"
                     labelPlacement="outside"
+                    className="col-span-2 md:col-span-1"
                     placeholder="Enter your last name"
                     validate={(value) => {
                       if (value.length < 3) {
@@ -167,20 +166,10 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-1 w-full">
-                  <Button
-                    type="reset"
-                    className="mt-3 w-full"
-                    size="lg"
-                    color="warning"
-                  >
+                  <Button type="reset" className="mt-3 w-full" size="lg" color="warning">
                     Reset
                   </Button>
-                  <Button
-                    type="submit"
-                    className="mt-3 w-full"
-                    size="lg"
-                    color="secondary"
-                  >
+                  <Button type="submit" className="mt-3 w-full" size="lg" color="secondary">
                     Submit
                   </Button>
                 </div>
