@@ -1,152 +1,84 @@
 "use client";
-import {blogs, IBlog} from "@/lib/data";
+import {BoxReveal} from "@/components/ui/box-reveal";
+import {projects} from "@/lib/data";
 import {Button} from "@heroui/button";
-import {Card, CardBody, CardFooter, CardHeader} from "@heroui/card";
+import {Card, CardBody} from "@heroui/card";
 import {Chip} from "@heroui/chip";
-import {AnimatePresence, motion} from "framer-motion";
-import {CircleX} from "lucide-react";
+import {GithubIcon, LinkIcon} from "lucide-react";
 import Image from "next/image";
-import React, {useEffect, useId, useRef, useState} from "react";
+import Link from "next/link";
 import ProjectHeader from "./project-header";
 
-const useOutsideClick = (
-  ref: React.RefObject<HTMLDivElement>,
-  callback: (event: MouseEvent | TouchEvent) => void,
-) => {
-  useEffect(() => {
-    const listener = (event: MouseEvent | TouchEvent) => {
-      if (!ref.current || ref.current.contains(event.target as Node)) {
-        return;
-      }
-      callback(event);
-    };
-
-    document.addEventListener("mousedown", listener);
-    document.addEventListener("touchstart", listener);
-
-    return () => {
-      document.removeEventListener("mousedown", listener);
-      document.removeEventListener("touchstart", listener);
-    };
-  }, [ref, callback]);
-};
-
 const Project: React.FC = () => {
-  const [activePost, setActivePost] = useState<IBlog | null>(null);
-  const ref = useRef<HTMLDivElement>(null as unknown as HTMLDivElement);
-  const id = useId();
-
-  useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        setActivePost(null);
-      }
-    }
-
-    if (activePost) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, [activePost]);
-
-  useOutsideClick(ref, () => setActivePost(null));
-
   return (
     <>
-      <AnimatePresence>
-        {activePost && (
-          <motion.div
-            initial={{opacity: 0}}
-            animate={{opacity: 1}}
-            exit={{opacity: 0}}
-            className="fixed inset-0 bg-black/30 z-10"
-          />
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence>
-        {activePost && (
-          <div className="fixed inset-0 grid place-items-center z-20 p-1">
-            <motion.div
-              layoutId={`card-${activePost.title}-${id}`}
-              ref={ref}
-              className="w-full bg-white max-w-xl dark:bg-neutral-900 rounded-lg shadow-lg overflow-hidden"
-            >
-              <div className="relative">
-                <Image
-                  src={activePost.image}
-                  alt={activePost.title}
-                  width={600}
-                  height={300}
-                  className="w-full h-60 object-cover"
-                />
-                <button
-                  onClick={() => setActivePost(null)}
-                  className="absolute top-4 right-4 p-1 rounded-full"
-                >
-                  <CircleX size={24} />
-                </button>
-              </div>
-
-              <div className="p-4">
-                <h2 className="text-2xl font-bold mb-2 text-secondary">{activePost.title}</h2>
-                <p className="text-sm text-black/60 dark:text-white/60 mb-4">
-                  {activePost.description}
-                </p>
-                <div className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
-                  {activePost.content()}
-                </div>
-                <div className="flex justify-center mt-2">
-                  <Button size={"sm"} variant="flat">
-                    Read More...
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        )}
-      </AnimatePresence>
-
       <ProjectHeader />
-      <div className="max-w-6xl  mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {blogs.map((post) => (
-          <motion.div
-            layoutId={`card-${post.title}-${id}`}
-            key={post.title}
-            onClick={() => setActivePost(post)}
-            className="p-2 group flex flex-col rounded-xl cursor-pointer"
-          >
-            <Card key={post.title} className="overflow-hidden">
-              <CardHeader className="p-0">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  width={600}
-                  height={300}
-                  className="object-cover max-w-full transition-all duration-200 group-hover:scale-105"
-                />
-              </CardHeader>
-              <CardBody className="p-4">
-                <h1 className="text-lg font-semibold mb-2">{post.title}</h1>
-                <p className="text-sm text-black/60 dark:text-white/60">{post.description}</p>
-              </CardBody>
-              <CardFooter className="flex justify-between items-center p-4">
-                <div className="flex flex-wrap gap-1">
-                  {post.category?.map((_, indx) => (
-                    <Chip key={indx} color="secondary" size="sm" variant="flat">
-                      {_}
-                    </Chip>
-                  ))}
-                </div>
-                <p className="text-sm">{post.date}</p>
-              </CardFooter>
-            </Card>
-          </motion.div>
-        ))}
+      <div className="mt-8 md:mt-16 w-full mx-auto space-y-20">
+        <div className="grid grid-cols-2 gap-6">
+          {projects?.map((project) => (
+            <div key={project.title}>
+              <Card>
+                <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+                  <CardBody className="group">
+                    <figure className="w-full h-52 group-hover:h-48 transition-all duration-300 dark:bg-[#180828] bg-[#F2EAFA] p-2 rounded-md relative overflow-hidden">
+                      <div
+                        style={{
+                          background:
+                            "linear-gradient(123.9deg, #6020A0 1.52%, rgba(0, 0, 0, 0) 68.91%)",
+                        }}
+                        className="absolute top-0 left-0 w-full h-full  group-hover:opacity-100 opacity-0  transition-all duration-300"
+                      ></div>
+                      <Image
+                        src={project.image}
+                        alt="shoes"
+                        width={600}
+                        height={600}
+                        className="absolute -bottom-1 group-hover:-bottom-5 right-0 h-64 w-[80%] border-white/50 group-hover:border-4 border-4 group-hover:border-[#9353D3]/50 rounded-lg object-cover transition-all duration-300"
+                      />
+                    </figure>
+                    <article className="p-4 space-y-2">
+                      <div className="flex flex-wrap gap-1 items-center">
+                        {project.techStack.map((tech) => (
+                          <Chip key={tech} radius="sm" color="secondary" variant="flat">
+                            {tech}
+                          </Chip>
+                        ))}
+                      </div>
+                      <h1 className="text-base font-semibold capitalize">
+                        {project.highlightTitle}
+                      </h1>
+                      <p className="text-sm leading-normal">{project.highlightDescription}</p>
+                      <div className="text-base dark:text-white text-secondary font-normal  group-hover:opacity-100 opacity-0 translate-y-2 group-hover:translate-y-0 pt-2 flex gap-1  transition-all duration-300">
+                        <Button
+                          as={Link}
+                          target="_blank"
+                          href={project.githubUrl}
+                          isIconOnly
+                          variant="flat"
+                          color="secondary"
+                          size="sm"
+                        >
+                          <GithubIcon size={20} />
+                        </Button>
+                        <Button
+                          as={Link}
+                          target="_blank"
+                          href={project.liveUrl}
+                          isIconOnly
+                          variant="flat"
+                          color="secondary"
+                          size="sm"
+                        >
+                          <LinkIcon size={20} />
+                        </Button>
+                      </div>
+                    </article>
+                  </CardBody>
+                </BoxReveal>
+              </Card>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
