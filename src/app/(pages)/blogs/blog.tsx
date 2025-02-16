@@ -112,7 +112,7 @@ const Blog: React.FC = () => {
       </AnimatePresence>
 
       <BlogHeader />
-      <div className="max-w-6xl  mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-4">
         {blogs.map((post) => (
           <motion.div
             layoutId={`card-${post.title}-${id}`}

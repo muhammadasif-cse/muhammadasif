@@ -13,9 +13,9 @@ const BlogHeader = () => {
     <motion.div
       initial={{opacity: 0, y: -20}}
       animate={{opacity: 1, y: 0}}
-      className="px-4 py-12 md:py-16 bg-background container"
+      className="py-12 bg-background container"
     >
-      <div className="max-w-6xl mx-auto space-y-10">
+      <div className="mx-auto space-y-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           <div className="space-y-4 col-span-2 flex-1">
             <h1 className="text-4xl font-bold mb-4">
@@ -37,32 +37,36 @@ const BlogHeader = () => {
           </div>
         </div>
 
-        <div className="flex gap-4 items-center flex-wrap">
-          <div className="flex-1">
-            <Input radius="sm" placeholder="Search articles..." />
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-4 items-center flex-wrap">
+          <div className="w-full md:col-span-2">
+            <Input radius="sm" placeholder="Search projects..." />
           </div>
-          <Select radius="sm" className="max-w-xs" placeholder="Filter by category">
-            {categories.map((category) => (
-              <SelectItem key={category.key}>{category.label}</SelectItem>
-            ))}
-          </Select>
-          <Button variant="flat" isIconOnly radius="sm" color="secondary">
-            <Filter className="h-5 w-5" />
-          </Button>
+          <div className="flex items-center gap-4 w-full">
+            <Select radius="sm" className="w-full" placeholder="Filter by category">
+              {categories.map((category) => (
+                <SelectItem key={category.key}>{category.label}</SelectItem>
+              ))}
+            </Select>
+            <Button variant="flat" isIconOnly radius="sm" color="secondary">
+              <Filter className="h-5 w-5" />
+            </Button>
+          </div>
         </div>
 
         <div className="flex gap-2 flex-wrap">
-          <Chip color="secondary">All</Chip>
-          <Chip color="secondary" variant="flat">
+          <Chip radius="sm" color="secondary">
+            All
+          </Chip>
+          <Chip radius="sm" color="secondary" variant="flat">
             Technology
           </Chip>
-          <Chip color="secondary" variant="flat">
+          <Chip radius="sm" color="secondary" variant="flat">
             Design
           </Chip>
-          <Chip color="secondary" variant="flat">
+          <Chip radius="sm" color="secondary" variant="flat">
             Business
           </Chip>
-          <Chip color="secondary" variant="flat">
+          <Chip radius="sm" color="secondary" variant="flat">
             Marketing
           </Chip>
         </div>

@@ -1,11 +1,11 @@
 "use client";
-import { Button } from "@heroui/button";
-import { Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import {Button} from "@heroui/button";
+import {Moon, Sun} from "lucide-react";
+import {useTheme} from "next-themes";
+import {useEffect, useState} from "react";
 
 export function ThemeSwitcher() {
-  const { theme, setTheme } = useTheme();
+  const {theme, setTheme} = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -19,6 +19,7 @@ export function ThemeSwitcher() {
   return (
     <div>
       <Button
+        radius="sm"
         isIconOnly
         variant="flat"
         onPress={() => setTheme(theme === "light" ? "dark" : "light")}

@@ -36,8 +36,8 @@ export default function Navigation() {
   };
 
   return (
-    <nav aria-label="Main navigation">
-      <Navbar isBordered>
+    <nav aria-label="Main navigation" className="sticky top-0 z-50">
+      <Navbar isBordered shouldHideOnScroll>
         <NavbarBrand as={Link} href="/">
           <AsifLogo />
           <p className="font-bold text-inherit">ASIF</p>
@@ -55,7 +55,7 @@ export default function Navigation() {
           <NavbarItem className="flex items-center gap-1">
             <div className="items-center hidden gap-1 lg:flex">
               <ThemeSwitcher />
-              <Button as={Link} color="secondary" href="/resume" variant="flat">
+              <Button radius="sm" as={Link} color="secondary" href="/resume" variant="flat">
                 Resume
               </Button>
             </div>
