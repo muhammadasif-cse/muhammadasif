@@ -36,8 +36,8 @@ export default function Navigation() {
   };
 
   return (
-    <nav aria-label="Main navigation" className="sticky top-0 z-50">
-      <Navbar isBordered shouldHideOnScroll>
+    <nav aria-label="Main navigation">
+      <Navbar isBordered>
         <NavbarBrand as={Link} href="/">
           <AsifLogo />
           <p className="font-bold text-inherit">ASIF</p>
