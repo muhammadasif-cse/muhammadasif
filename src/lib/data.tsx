@@ -361,7 +361,7 @@ export const projects: IProjects[] = [
     ],
     liveUrl: "https://aiblog.example.com",
     githubUrl: "https://github.com/asif/ai-blog-platform",
-    image: "/images/projects/muhammadasif-e-commerce-platform-mockup.avif",
+    image: "/images/projects/muhammadasif-ai-assisted-writing.webp",
     highlightTitle: "AI-Assisted Writing",
     highlightDescription:
       "Enhances the blogging experience with AI-powered tools for content suggestions, SEO optimization, and seamless editing.",
@@ -383,7 +383,7 @@ export const projects: IProjects[] = [
     ],
     liveUrl: "https://jobportal.example.com",
     githubUrl: "https://github.com/asif/job-portal",
-    image: "/images/projects/job-portal-mockup.avif",
+    image: "/images/projects/muhammadasif-job-portal-system.webp",
     highlightTitle: "Smart Hiring Made Simple",
     highlightDescription:
       "A powerful job portal that streamlines recruitment with advanced search, tracking, and employer branding tools.",
