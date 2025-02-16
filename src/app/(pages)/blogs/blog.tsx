@@ -70,7 +70,7 @@ const Blog: React.FC = () => {
 
       <AnimatePresence>
         {activePost && (
-          <div className="fixed inset-0 grid place-items-center z-20 p-1">
+          <div className="fixed inset-0 grid place-items-center z-20">
             <motion.div
               layoutId={`card-${activePost.title}-${id}`}
               ref={ref}
@@ -112,13 +112,13 @@ const Blog: React.FC = () => {
       </AnimatePresence>
 
       <BlogHeader />
-      <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:gap-4">
+      <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-4 gap-2">
         {blogs.map((post) => (
           <motion.div
             layoutId={`card-${post.title}-${id}`}
             key={post.title}
             onClick={() => setActivePost(post)}
-            className="p-2 group flex flex-col rounded-xl cursor-pointer"
+            className="group flex flex-col rounded-xl cursor-pointer"
           >
             <Card key={post.title} className="overflow-hidden">
               <CardHeader className="p-0">

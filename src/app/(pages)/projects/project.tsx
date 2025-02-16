@@ -14,7 +14,7 @@ const Project: React.FC = () => {
     <>
       <ProjectHeader />
       <div className="mt-8 w-full mx-auto space-y-20">
-        <div className="grid md:grid-cols-2 lg:gap-6 gap-3">
+        <div className="grid md:grid-cols-2 lg:gap-4 gap-2">
           {projects?.map((project) => (
             <div key={project.title}>
               <Card>
