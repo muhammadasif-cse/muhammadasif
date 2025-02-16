@@ -8,7 +8,7 @@ export const siteConfig = {
   author: "Muhammad Asif",
   email: "muhammadasif.cse@gmail.com",
   siteUrl: "https://muhammadasif.vercel.app",
-  creator: "@muhammadasif_cse",
+  creator: "@muhammadasif-cse",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -31,7 +31,7 @@ export const siteConfig = {
     description:
       "Building scalable web applications with JavaScript, TypeScript, React, Node.js, and more.",
     image: "https://muhammadasif.vercel.app/images/muhammadasif.png",
-    creator: "@muhammadasif_cse",
+    creator: "@muhammadasifcse",
   },
   links: {
     github: "https://github.com/muhammadasif-cse",

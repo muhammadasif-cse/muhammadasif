@@ -13,14 +13,14 @@ const Project: React.FC = () => {
   return (
     <>
       <ProjectHeader />
-      <div className="mt-8 md:mt-16 w-full mx-auto space-y-20">
-        <div className="grid grid-cols-2 gap-6">
+      <div className="mt-8 w-full mx-auto space-y-20">
+        <div className="grid md:grid-cols-2 lg:gap-6 gap-3">
           {projects?.map((project) => (
             <div key={project.title}>
               <Card>
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
                   <CardBody className="group">
-                    <figure className="w-full h-52 group-hover:h-48 transition-all duration-300 dark:bg-[#180828] bg-[#F2EAFA] p-2 rounded-md relative overflow-hidden">
+                    <figure className="w-full h-60 transition-all duration-300 dark:bg-[#180828] bg-[#F2EAFA] p-2 rounded-md relative overflow-hidden">
                       <div
                         style={{
                           background:
@@ -36,7 +36,7 @@ const Project: React.FC = () => {
                         className="absolute -bottom-1 group-hover:-bottom-5 right-0 h-64 w-[80%] border-white/50 group-hover:border-4 border-4 group-hover:border-[#9353D3]/50 rounded-lg object-cover transition-all duration-300"
                       />
                     </figure>
-                    <article className="p-4 space-y-2">
+                    <article className="md:p-4 pt-4 space-y-2">
                       <div className="flex flex-wrap gap-1 items-center">
                         {project.techStack.map((tech) => (
                           <Chip key={tech} radius="sm" color="secondary" variant="flat">
@@ -47,8 +47,10 @@ const Project: React.FC = () => {
                       <h1 className="text-base font-semibold capitalize">
                         {project.highlightTitle}
                       </h1>
-                      <p className="text-sm leading-normal">{project.highlightDescription}</p>
-                      <div className="text-base dark:text-white text-secondary font-normal  group-hover:opacity-100 opacity-0 translate-y-2 group-hover:translate-y-0 pt-2 flex gap-1  transition-all duration-300">
+                      <p className="text-sm leading-normal text-black/60 dark:text-white/60">
+                        {project.highlightDescription}
+                      </p>
+                      <div className="text-base dark:text-white text-secondary font-normal pt-2 flex gap-1 transition-all duration-300">
                         <Button
                           as={Link}
                           target="_blank"
