@@ -6,6 +6,7 @@ import {Chip} from "@heroui/chip";
 import {AnimatePresence, motion} from "framer-motion";
 import {CircleX} from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React, {useEffect, useId, useRef, useState} from "react";
 import BlogHeader from "./blog-header";
 
@@ -101,9 +102,11 @@ const Blog: React.FC = () => {
                   {activePost.content()}
                 </div>
                 <div className="flex justify-center mt-2">
-                  <Button size={"sm"} variant="flat">
-                    Read More...
-                  </Button>
+                  <Link href={`/blogs/${activePost.id}`}>
+                    <Button size={"sm"} variant="flat">
+                      Read More...
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
